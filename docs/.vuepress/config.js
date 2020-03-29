@@ -9,7 +9,7 @@ module.exports = {
         '/': {
             lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
             title: "",
-            description: '丫丫加油个人博客,一个大龄文艺女程序员的转型之作,主要记录前端知识点积累,展示网页设计作品及网站建设作品,以供前端爱好者们分享讨论!'
+            description: 'IT博客，记录学习点滴、生活点滴'
         },
         '/en/': {
             lang: 'en-US',
