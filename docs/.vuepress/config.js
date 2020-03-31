@@ -19,6 +19,9 @@ module.exports = {
     },
     themeConfig: {
         logo: '/logo.png',
+        search: true,
+        pageNum: 2,
+        listBg: '/bg.jpg',
         locales: {
             '/': {
                 selectText: '选择语言',
@@ -57,4 +60,5 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
+    plugins: ['@vuepress/back-to-top']
 }

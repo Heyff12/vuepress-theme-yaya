@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.4.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "vuepress": "^1.4.0"
   }
 }
