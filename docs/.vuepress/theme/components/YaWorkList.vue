@@ -2,36 +2,38 @@
     <section class="titleListContainer">
       <ul class="pageListItem">
         <li v-for="(page,index) in $pagination.pages" :key="index">
-          <h4>
-            <i class="iconfont iconbiaoti"></i>
-            <router-link :to="page.path">{{ page.title }}</router-link>
-          </h4>
-          <!-- <p v-html="page.excerpt"></p> -->
-          <p class="summary">
-            <router-link :to="page.path">{{page.frontmatter.summary}}</router-link>             
-          </p>
-          <footer>
-            <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
-            <div class="tags">
-              <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`">
-                <i class="iconfont icontag"></i>{{tag}}
-              </a>
-            </div>
-          </footer>
+          <div class="img">
+            <router-link :to="page.path">
+              <img :src="page.frontmatter.imgBg || $site.themeConfig.workListBg" alt="Yaya's blog">
+            </router-link>
+          </div>
+          <section class="text">
+            <h4>
+              <i class="iconfont iconbiaoti"></i>
+              <router-link :to="page.path">{{ page.title }}</router-link>
+            </h4>
+            <p class="summary">
+              <router-link :to="page.path">{{page.frontmatter.summary}}</router-link>             
+            </p>
+            <footer>
+              <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
+              <div class="tags">
+                <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`">
+                  <i class="iconfont icontag"></i>{{tag}}
+                </a>
+              </div>
+            </footer>
+          </section>
         </li>
       </ul>
       <Pagination />
-      <!-- <div id="pagination">
-        <router-link v-if="$pagination.hasPrev" :to="$pagination.prevLink">Prev</router-link>
-        <router-link v-if="$pagination.hasNext" :to="$pagination.nextLink">Next</router-link>
-      </div> -->
     </section>
 </template>
 
 <script>
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 export default {
-    name: 'YaTitleList',
+    name: 'YaWorkList',
     components: {
       Pagination
     },
@@ -53,14 +55,33 @@ export default {
   width: 100%;
   .pageListItem{
   width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   li{
-    width:100%;
+    width:48%;
     background-color: white;
-    border-bottom:1px solid @borderColor;
     border-radius: 5px;
-    padding:20px;
+    padding:0;
     box-sizing: border-box;
-    margin:20px auto;
+    box-shadow: 0px 1px 10px @shadowColor;
+    margin:20px 4% 20px 0;
+    overflow: hidden;
+    &:nth-child(2n){
+      margin-right: 0;
+    }
+    .img{
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .text{
+      padding:10px 20px;
+    }
     h4{
       margin-bottom: 15px;
       i{
@@ -92,20 +113,15 @@ export default {
       }
       .tags{
         a{
-          // color:@orange;
           padding-left:10px;
         }
       }
     }
     &:hover{
-      box-shadow: 0px 1px 10px @shadowColor;
-      h4 {
-        i {
-          animation: rotate .5s infinite linear;
-          -webkit-animation: rotate 1s infinite linear ;
-          -webkit-transform-origin: center center;
-          -ms-transform-origin: center center;
-          transform-origin: center center;
+      .img {
+        img {
+          transition: all .3s;
+          transform:scale(1.1);
         }
       }
     }

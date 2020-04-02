@@ -2,12 +2,7 @@
     <section class="titleListContainer">
       <ul class="pageListItem">
         <li v-for="(page,index) in $pagination.pages" :key="index">
-          <div class="img">
-            <router-link :to="page.path">
-              <img :src="page.frontmatter.imgBg || $site.themeConfig.picListBg" alt="Yaya's blog">
-            </router-link>
-          </div>
-          <section class="text">
+          <section class="left">
             <h4>
               <i class="iconfont iconbiaoti"></i>
               <router-link :to="page.path">{{ page.title }}</router-link>
@@ -24,6 +19,13 @@
               </div>
             </footer>
           </section>
+          <section class="right">
+            <div class="img">
+              <router-link :to="page.path">
+                <img :src="page.frontmatter.imgBg || $site.themeConfig.bookListBg" alt="Yaya's blog">
+              </router-link>
+            </div>
+          </section>
         </li>
       </ul>
       <Pagination />
@@ -38,7 +40,6 @@ export default {
       Pagination
     },
     mounted(){
-        console.log(this.$site)
         console.log(this.$page)
         console.log(this.$frontmatter)
         console.log(this.$frontmatterKey)
@@ -56,32 +57,32 @@ export default {
   width: 100%;
   .pageListItem{
   width:100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   li{
-    width:48%;
+    width:100%;
     background-color: white;
+    border-bottom:1px solid @borderColor;
     border-radius: 5px;
-    padding:0;
-    box-sizing: border-box;
-    box-shadow: 0px 1px 10px @shadowColor;
-    margin:20px 4% 20px 0;
+    margin:20px auto;
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
-    &:nth-child(2n){
-      margin-right: 0;
+    .left{
+      flex:1;
+      padding:20px;
+      box-sizing: border-box;
     }
-    .img{
-      width: 100%;
-      height: 260px;
-      overflow: hidden;
-      img {
+    .right {
+      width:280px;
+      max-height:220px;
+      .img{
         width: 100%;
-        height: auto;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
-    }
-    .text{
-      padding:10px 20px;
     }
     h4{
       margin-bottom: 15px;
@@ -114,15 +115,20 @@ export default {
       }
       .tags{
         a{
+          // color:@orange;
           padding-left:10px;
         }
       }
     }
     &:hover{
-      .img {
-        img {
-          transition: all .3s;
-          transform:scale(1.1);
+      box-shadow: 0px 1px 10px @shadowColor;
+      h4 {
+        i {
+          animation: rotate .5s infinite linear;
+          -webkit-animation: rotate 1s infinite linear ;
+          -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
+          transform-origin: center center;
         }
       }
     }

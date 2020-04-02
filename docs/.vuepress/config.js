@@ -22,6 +22,8 @@ module.exports = {
         search: true,
         pageNum: 2,
         picListBg: '/bg.jpg',
+        workListBg: '/bg.jpg',
+        bookListBg: '/book.jpg',
         locales: {
             '/': {
                 selectText: '选择语言',
@@ -87,12 +89,23 @@ module.exports = {
                         },
                     },
                     {
+                        id: 'works',
+                        dirname: 'works',
+                        path: '/works/',
+                        itemPermalink: '/:regular',
+                        layout: 'LayoutWork',
+                        pagination: {
+                            lengthPerPage: 6,
+                        },
+                    },
+                    {
                         id: 'reading',
                         dirname: 'reading',
                         path: '/reading/',
                         itemPermalink: '/:regular',
+                        layout:'LayoutBook',
                         pagination: {
-                            lengthPerPage: 10,
+                            lengthPerPage: 9,
                         },
                     },
                     {
@@ -100,18 +113,9 @@ module.exports = {
                         dirname: 'writing',
                         path: '/writing/',
                         itemPermalink: '/:regular',
+                        layout:'LayoutPic',
                         pagination: {
-                            lengthPerPage: 10,
-                        },
-                    },
-                    {
-                        id: 'works',
-                        dirname: 'works',
-                        path: '/works/',
-                        itemPermalink: '/:regular',
-                        layout: 'LayoutPic',
-                        pagination: {
-                            lengthPerPage: 6,
+                            lengthPerPage: 8,
                         },
                     },
                 ],
