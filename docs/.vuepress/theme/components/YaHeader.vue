@@ -51,6 +51,7 @@ export default {
     // border-bottom: 1px solid @shadowColor;
     // box-shadow: 0px 1px 20px @shadowColor;
     position: fixed;
+    z-index: 99999;
     top: 0;
     background-color: white;
     box-sizing: border-box;

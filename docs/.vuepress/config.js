@@ -21,7 +21,7 @@ module.exports = {
         logo: '/logo.png',
         search: true,
         pageNum: 2,
-        listBg: '/bg.jpg',
+        picListBg: '/bg.jpg',
         locales: {
             '/': {
                 selectText: '选择语言',
@@ -109,8 +109,9 @@ module.exports = {
                         dirname: 'works',
                         path: '/works/',
                         itemPermalink: '/:regular',
+                        layout: 'LayoutPic',
                         pagination: {
-                            lengthPerPage: 10,
+                            lengthPerPage: 6,
                         },
                     },
                 ],
