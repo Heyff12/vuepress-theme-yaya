@@ -12,10 +12,8 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.4.0",
     "@vuepress/plugin-blog": "^1.9.2",
-    "@vuepress/theme-blog": "^2.2.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
-    "lodash.throttle": "^4.1.1",
     "vuepress": "^1.4.0"
   }
 }
