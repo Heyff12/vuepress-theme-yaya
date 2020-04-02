@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style scoped>
+@import '../styles/app.less';
 .global-body{
   margin-top: 104px;
   width:100%;

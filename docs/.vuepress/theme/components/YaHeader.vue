@@ -8,7 +8,7 @@
                     </a>
                 </section>
                 <section class="menu">
-                    <section  class="linkItem"  v-for="(item,index) in navLinkList" :key="index">
+                    <section  :class="['linkItem',{'active':currentNav.indexOf(item.link)>-1}]"  v-for="(item,index) in navLinkList" :key="index">
                         <a :href="item.link">
                             {{item.text}}
                         </a>
@@ -28,12 +28,14 @@ export default {
     data(){
         return {
             navLinkList: [],
+            currentNav: '/',
         }
     },
     mounted(){
+        console.log(this.$route)
         console.log(this.$site)
         this.navLinkList = this.$site.themeConfig.locales['/'].nav;
-        console.log(this.navLinkList)
+        this.currentNav = this.$route.path
     }
 }
 </script>
@@ -98,8 +100,12 @@ export default {
                     a{
                         color: @textColor;
                     }
+                    &.active{
+                        a{
+                            color: @themeColor;
+                        }
+                    }
                     &:hover{
-                        color: @themeColor;
                         a{
                             color: @themeColor;
                         }

@@ -1,14 +1,5 @@
 ---
-title: '小程序路由normal'
-tags: 
-  - haha
-  - hehe
-category: 
-  - vue
-  - vuepress
-summary: '
- 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面,  
- 需要跳转的 tabBar 页面的路径 (代码包路径)（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。'
+title: '小程序路由'
 ---
 
 ## 一、小程序跳转方式
@@ -18,12 +9,12 @@ summary: '
 > 需要跳转的 tabBar 页面的路径 (代码包路径)（需在 app.json 的 tabBar 字段定义的页面），路径后不能带参数。
  
 使用备注：由于tabBar在切换器需要获取收取及是否登录的判断，故当前小程序的tabBar是自定义组件，该跳转无效 
-<!-- more -->
 
 ***只有该方法的url参数，不能进行拼接，必须跟tabBar配置的路由一模一样；wx.navigateBack没有url参数***
 
 ### 2、wx.reLaunch(Object object)  
 > 关闭所有页面，打开到应用内的某个页面  
+
 
 ### 3、wx.redirectTo(Object object)  
 > 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。

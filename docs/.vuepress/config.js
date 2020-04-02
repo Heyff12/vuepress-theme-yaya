@@ -67,6 +67,7 @@ module.exports = {
     },
     plugins: [
         '@vuepress/back-to-top',
+        '@vuepress/last-updated',
         [
             '@vuepress/blog',
             {
@@ -80,7 +81,7 @@ module.exports = {
                   path: '/study/',
                   // layout: 'Layout',
                   pagination: {
-                    lengthPerPage: 20,
+                    lengthPerPage: 10,
                   },
                 },
                 {
@@ -88,7 +89,23 @@ module.exports = {
                   dirname: 'reading',
                   path: '/reading/',
                   pagination: {
-                    lengthPerPage: 20,
+                    lengthPerPage: 10,
+                  },
+                },
+                {
+                  id: 'writing',
+                  dirname: 'writing',
+                  path: '/writing/',
+                  pagination: {
+                    lengthPerPage: 10,
+                  },
+                },
+                {
+                  id: 'works',
+                  dirname: 'works',
+                  path: '/works/',
+                  pagination: {
+                    lengthPerPage: 10,
                   },
                 },
               ],
