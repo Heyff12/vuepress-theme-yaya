@@ -37,7 +37,7 @@ module.exports = {
                 nav: [
                     { text: '学习', link: '/study/', english: 'Study' },
                     { text: '作品', link: '/works/', english: 'Works' },
-                    { text: '读书', link: '/reading/' , english: 'Reading'},
+                    { text: '读书', link: '/reading/', english: 'Reading' },
                     { text: '随笔', link: '/writing/', english: 'Writing' },
                     { text: '标签', link: '/tags/', english: 'Tags' },
                     // { text: '分类', link: '/categories/' , english: 'categories'},
@@ -71,60 +71,65 @@ module.exports = {
         [
             '@vuepress/blog',
             {
-              directories: [
-                {
-                  // Unique ID of current classification
-                  id: 'study',
-                  // Target directory
-                  dirname: 'study',
-                  // Path of the `entry page` (or `list page`)
-                  path: '/study/',
-                  // layout: 'Layout',
-                  pagination: {
-                    lengthPerPage: 10,
-                  },
-                },
-                {
-                  id: 'reading',
-                  dirname: 'reading',
-                  path: '/reading/',
-                  pagination: {
-                    lengthPerPage: 10,
-                  },
-                },
-                {
-                  id: 'writing',
-                  dirname: 'writing',
-                  path: '/writing/',
-                  pagination: {
-                    lengthPerPage: 10,
-                  },
-                },
-                {
-                  id: 'works',
-                  dirname: 'works',
-                  path: '/works/',
-                  pagination: {
-                    lengthPerPage: 10,
-                  },
-                },
-              ],
-              frontmatters: [
-                {
-                  id: "tags",
-                  keys: ['tags'],
-                  path: '/tags/',
-                  //layout: 'Tags',  //defaults to `FrontmatterKey.vue`
-                  frontmatter: { title: '分类检索文章' },
-                //   itemlayout: 'FrontmatterKey',
-                },{
-                    id: "categories",         // 再 Vue 实例中的名称
-                    keys: ['category'],
-                    path: '/categories/',
-                    //layout: 'Categories',  //defaults to `FrontmatterKey.vue`
-                    frontmatter: { title: '分类检索文章' },
-                  },
-              ]
+                directories: [
+                    {
+                        // Unique ID of current classification
+                        id: 'study',
+                        // Target directory
+                        dirname: 'study',
+                        // Path of the `entry page` (or `list page`)
+                        path: '/study/',
+                        // layout: 'Layout',
+                        //   itemPermalink: '/:year/:month/:day/:slug',
+                        itemPermalink: '/:regular',
+                        pagination: {
+                            lengthPerPage: 10,
+                        },
+                    },
+                    {
+                        id: 'reading',
+                        dirname: 'reading',
+                        path: '/reading/',
+                        itemPermalink: '/:regular',
+                        pagination: {
+                            lengthPerPage: 10,
+                        },
+                    },
+                    {
+                        id: 'writing',
+                        dirname: 'writing',
+                        path: '/writing/',
+                        itemPermalink: '/:regular',
+                        pagination: {
+                            lengthPerPage: 10,
+                        },
+                    },
+                    {
+                        id: 'works',
+                        dirname: 'works',
+                        path: '/works/',
+                        itemPermalink: '/:regular',
+                        pagination: {
+                            lengthPerPage: 10,
+                        },
+                    },
+                ],
+                frontmatters: [
+                    {
+                        id: "tags",
+                        keys: ['tags'],
+                        path: '/tags/',
+                        //layout: 'Tags',  //defaults to `FrontmatterKey.vue`
+                        frontmatter: { title: '分类检索文章' },
+                        //   itemlayout: 'FrontmatterKey',
+                    }, {
+                        id: "categories",         // 再 Vue 实例中的名称
+                        keys: ['category'],
+                        path: '/categories/',
+                        //layout: 'Categories',  //defaults to `FrontmatterKey.vue`
+                        frontmatter: { title: '分类检索文章' },
+                    },
+                ]
             },
         ],
     ]

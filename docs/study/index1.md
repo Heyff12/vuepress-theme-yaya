@@ -1,5 +1,5 @@
 ---
-title: '小程序路由'
+title: '小程序路由index'
 # layout: 'List'
 tags: 
   - haha

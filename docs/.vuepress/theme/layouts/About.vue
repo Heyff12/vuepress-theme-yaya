@@ -1,7 +1,7 @@
 <template>
   <YaLineContainer>
     <section class="error">
-      <h1 class="error-code">404</h1>
+      <h1 class="error-code">关于我</h1>
       <p class="error-description">Page not found</p>
       <router-link :to="$localePath" class="error-home">home</router-link>
     </section>
@@ -11,7 +11,7 @@
 <script>
 import YaLineContainer from '../components/YaLineContainer'
 export default {
-  name: 'NotFound',
+  name: 'About',
   components: {
     YaLineContainer
   },
