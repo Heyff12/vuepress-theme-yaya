@@ -1,7 +1,6 @@
 <template>
   <div id="global-layout">
     <YaHeader />
-    <!-- <DefaultGlobalLayout/> -->
     <section class="global-body">
       <component :is="layout"/>
     </section>
@@ -12,13 +11,11 @@
 <script>
 import YaHeader from '../components/YaHeader'
 import YaFooter from '../components/YaFooter'
-import GlobalLayout from '@app/components/GlobalLayout.vue'
 export default {
     name:'GlobalLayout',
     components: {
         YaHeader,
         YaFooter,
-        DefaultGlobalLayout: GlobalLayout,
     },
     computed: {
         layout () {
@@ -37,6 +34,7 @@ export default {
 
 <style scoped>
 .global-body{
-  padding-top: 100px;
+  margin-top: 104px;
+  width:100%;
 }
 </style>>

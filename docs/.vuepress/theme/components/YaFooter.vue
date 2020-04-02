@@ -6,7 +6,7 @@
         <section class="footer_content">
             <span>Author By Yaya</span>|
             <span>Powered By <a href="https://v1.vuepress.vuejs.org/zh/guide/">VuePress</a></span>|
-            <span>All rights reserved @Yaya</span>|
+            <!-- <span>All rights reserved @Yaya</span>| -->
             <span>豫ICP备14017364号-1</span>
         </section>
     </section>
@@ -25,10 +25,11 @@ export default {
     flex-direction: row;
     font-size: 12px;
     color: #829ebb;
-    padding:0 20px;
-    width:1200px;
-    margin:0 auto;
+    width:100%;
+    padding:0 10%;
+    box-sizing: border-box;
     justify-content: space-between;
+    margin-top:35px;
     .footer_content{
         span{
             padding:0 5px;

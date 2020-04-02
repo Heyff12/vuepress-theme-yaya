@@ -35,11 +35,13 @@ module.exports = {
                 },
                 algolia: {},
                 nav: [
-                    { text: '学习', link: '/study/' },
-                    { text: '阅读', link: '/reading/' },
-                    { text: 'Tags', link: '/tags/' },
-                    { text: 'Category', link: '/categories/' },
-                    { text: '关于', link: '/about/' },
+                    { text: '学习', link: '/study/', english: 'Study' },
+                    { text: '作品', link: '/works/', english: 'Works' },
+                    { text: '读书', link: '/reading/' , english: 'Reading'},
+                    { text: '随笔', link: '/writing/', english: 'Writing' },
+                    { text: '标签', link: '/tags/', english: 'Tags' },
+                    // { text: '分类', link: '/categories/' , english: 'categories'},
+                    { text: '关于', link: '/about/', english: 'About' },
                 ]
             },
             '/en/': {
