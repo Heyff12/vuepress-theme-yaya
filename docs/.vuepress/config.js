@@ -119,14 +119,14 @@ module.exports = {
                         id: "tags",
                         keys: ['tags'],
                         path: '/tags/',
-                        //layout: 'Tags',  //defaults to `FrontmatterKey.vue`
+                        layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
                         frontmatter: { title: '分类检索文章' },
-                        //   itemlayout: 'FrontmatterKey',
+                        // itemlayout: 'Layout',
                     }, {
                         id: "categories",         // 再 Vue 实例中的名称
                         keys: ['category'],
                         path: '/categories/',
-                        //layout: 'Categories',  //defaults to `FrontmatterKey.vue`
+                        layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
                         frontmatter: { title: '分类检索文章' },
                     },
                 ]
