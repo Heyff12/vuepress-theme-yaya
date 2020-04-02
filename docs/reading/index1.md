@@ -1,12 +1,11 @@
 ---
-title: '小程序路由'
+title: '阅读'
 # layout: 'List'
 tags: 
   - haha
-  - hehe
 category: 
   - vue
-  - vuepress
 ---
+# reading
 
-# study
+On the way.

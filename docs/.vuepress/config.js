@@ -36,6 +36,9 @@ module.exports = {
                 algolia: {},
                 nav: [
                     { text: '学习', link: '/study/' },
+                    { text: '阅读', link: '/reading/' },
+                    { text: 'Tags', link: '/tags/' },
+                    { text: 'Category', link: '/categories/' },
                     { text: '关于', link: '/about/' },
                 ]
             },
@@ -60,5 +63,50 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
-    plugins: ['@vuepress/back-to-top']
+    plugins: [
+        '@vuepress/back-to-top',
+        [
+            '@vuepress/blog',
+            {
+              directories: [
+                {
+                  // Unique ID of current classification
+                  id: 'study',
+                  // Target directory
+                  dirname: 'study',
+                  // Path of the `entry page` (or `list page`)
+                  path: '/study/',
+                  // layout: 'Layout',
+                  pagination: {
+                    lengthPerPage: 20,
+                  },
+                },
+                {
+                  id: 'reading',
+                  dirname: 'reading',
+                  path: '/reading/',
+                  pagination: {
+                    lengthPerPage: 20,
+                  },
+                },
+              ],
+              frontmatters: [
+                {
+                  id: "tags",
+                  keys: ['tags'],
+                  path: '/tags/',
+                  //layout: 'Tags',  //defaults to `FrontmatterKey.vue`
+                  frontmatter: { title: '分类检索文章' },
+                //   itemlayout: 'FrontmatterKey',
+                },{
+                    id: "categories",         // 再 Vue 实例中的名称
+                    keys: ['category'],
+                    path: '/categories/',
+                    //layout: 'Categories',  //defaults to `FrontmatterKey.vue`
+                    frontmatter: { title: '分类检索文章' },
+                  },
+              ]
+            },
+        ],
+    ]
 }

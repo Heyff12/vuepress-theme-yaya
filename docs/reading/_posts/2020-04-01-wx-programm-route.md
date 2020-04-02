@@ -1,11 +1,5 @@
 ---
-title: '小程序路由normal'
-tags: 
-  - haha
-  - hehe
-category: 
-  - vue
-  - vuepress
+title: '小程序路由'
 ---
 
 ## 一、小程序跳转方式
