@@ -24,6 +24,8 @@ module.exports = {
         picListBg: '/bg.jpg',
         workListBg: '/bg.jpg',
         bookListBg: '/book.jpg',
+        nextLinks: true,
+        prevLinks: true,
         locales: {
             '/': {
                 selectText: '选择语言',
@@ -70,6 +72,22 @@ module.exports = {
     plugins: [
         '@vuepress/back-to-top',
         '@vuepress/last-updated',
+        '@vuepress/nprogress',
+        ['@vuepress/search', {
+            searchMaxSuggestions: 6
+        }],
+        // [
+        //     'vuepress-plugin-comment',
+        //     {
+        //       choosen: 'valine', 
+        //       // options选项中的所有参数，会传给Valine的配置
+        //       options: {
+        //         el: '#valine-vuepress-comment',
+        //         appId: 'Your own appId',
+        //         appKey: 'Your own appKey'
+        //       }
+        //     }
+        // ],
         [
             '@vuepress/blog',
             {

@@ -1,1 +1,24 @@
 @import './font/iconfont.less';
+@import './variables.less';
+
+
+a {
+    color: @textColor;
+    &:hover{
+        color: @themeColor;
+    }
+}
+
+#global-layout {
+    h1,h2,h3,h4,h5,h6,ul,li,p,div,dl,dt,dd,img{
+        margin:0;
+        padding:0;
+    }
+
+    ul,li{
+        list-style: none;
+    }
+
+}
+
+@import './detail.less';

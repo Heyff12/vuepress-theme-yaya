@@ -1,6 +1,7 @@
 <template>
     <section class="header">
         <section class="headerInner">
+            <!-- <SearchBox/> -->
             <section class="headerBody">
                 <section class="logo">
                     <a href="/">
@@ -23,8 +24,12 @@
 </template>
 
 <script>
+import SearchBox from '@SearchBox'
 export default {
     name: 'YaHeader',
+    components: {
+        SearchBox
+    },
     data(){
         return {
             navLinkList: [],

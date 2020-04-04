@@ -1,5 +1,5 @@
 ---
-title: '小程序路由normal'
+title: '小程序路由normalhe'
 tags: 
   - haha
   - hehe

@@ -13,8 +13,13 @@
     "@vuepress/plugin-back-to-top": "^1.4.0",
     "@vuepress/plugin-blog": "^1.9.2",
     "@vuepress/plugin-last-updated": "^1.4.0",
+    "@vuepress/plugin-nprogress": "^1.4.0",
+    "@vuepress/plugin-search": "^1.4.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "vuepress": "^1.4.0"
+  },
+  "dependencies": {
+    "vuepress-plugin-comment": "^0.7.3"
   }
 }
