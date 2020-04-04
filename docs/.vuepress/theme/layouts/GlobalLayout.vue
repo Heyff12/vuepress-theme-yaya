@@ -1,5 +1,5 @@
 <template>
-  <div id="global-layout">
+  <div id="globalLayout">
     <YaHeader />
     <section class="global-body">
       <component :is="layout"/>

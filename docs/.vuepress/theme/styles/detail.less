@@ -9,6 +9,25 @@
     --item-hover-text-color: #393894;
 }
 
+html {
+    font-size: .925rem;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
 .markdownBody {
     background: none;
     font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -252,22 +271,6 @@
         margin-top: 30px;
     }
     
-    
-    
-    @media print {
-        html {
-            font-size: 13px;
-        }
-    
-        table,
-        pre {
-            page-break-inside: avoid;
-        }
-    
-        pre {
-            word-wrap: break-word;
-        }
-    }
     
     .md-fences {
         background-color: #f8f8f8;
