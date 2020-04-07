@@ -55,7 +55,8 @@ export default {
       overflow: hidden;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .text{
@@ -72,6 +73,17 @@ export default {
   }
 }
 }
+@media screen and (max-width: @midWidth) {
+  .titleListContainer{
+    .pageListItem{
+      li{
+        .img{
+          height: 220px;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: @minWidth) {
   .titleListContainer{
     .pageListItem{
@@ -79,7 +91,7 @@ export default {
         width:100%;
         margin:10px 0;
         .img{
-          max-height: 200px;
+          height: 200px;
         }
       }
     }

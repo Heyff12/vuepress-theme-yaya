@@ -85,7 +85,8 @@ export default {
       box-sizing: border-box;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
       }
     }
     .text{
@@ -155,7 +156,7 @@ export default {
   }
 }
 }
-@media screen and (max-width: @midWidth) {
+@media screen and (max-width: @midBoobWidth) {
   .titleListContainer{
     .pageListItem{
       li{

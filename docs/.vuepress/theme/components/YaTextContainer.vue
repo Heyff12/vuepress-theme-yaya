@@ -50,7 +50,6 @@ export default {
     }
   }
   .summary{
-    margin-bottom: 10px;
     color:@grey;
     a {
       color:@grey;
@@ -60,6 +59,7 @@ export default {
     }
   }
   footer {
+    margin-top:5px;
     display: flex;
     flex-direction: row;
     color:@grey;
@@ -71,6 +71,13 @@ export default {
       a{
         padding-right:10px;
       }
+    }
+  }
+}
+@media screen and (max-width: @midWidth) {
+  .textContainer{
+    footer{
+        flex-direction: column;
     }
   }
 }

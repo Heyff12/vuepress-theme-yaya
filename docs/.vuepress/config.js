@@ -152,7 +152,13 @@ module.exports = {
                         layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
                         frontmatter: { title: '分类检索文章' },
                     },
-                ]
+                ],
+                // comment: {
+                //     // Which service you'd like to use
+                //     service: 'disqus',
+                //     // The owner's name of repository to store the issues and comments.
+                //     shortname: 'vuepress-plugin-blog',
+                //   },
             },
         ],
     ]
