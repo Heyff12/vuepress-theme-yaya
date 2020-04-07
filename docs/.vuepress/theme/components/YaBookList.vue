@@ -155,14 +155,54 @@ export default {
   }
 }
 }
-
-@keyframes rotate
-{
-  from {
-    transform:rotate(0deg)
+@media screen and (max-width: @midWidth) {
+  .titleListContainer{
+    .pageListItem{
+      li{
+        width:48%;
+        margin:10px 4% 10px 0;
+        height:320px;
+        &:nth-child(2n){
+          margin-right: 0;
+        }
+        &:nth-child(3n){
+          margin-right: 4%;
+        }
+        h4{
+          margin-bottom: 6px;
+          i{
+            font-size: 14px;
+          }
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
-  to {
-    transform:rotate(-360deg)
+}
+@media screen and (max-width: @minWidth) {
+  .titleListContainer{
+    .pageListItem{
+      li{
+        width:100%;
+        margin:10px 0;
+        .text{
+          .textInner{
+            padding:5px 10px;
+          }
+        }
+        h4{
+          margin-bottom: 6px;
+          i{
+            font-size: 14px;
+          }
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 }
 </style>

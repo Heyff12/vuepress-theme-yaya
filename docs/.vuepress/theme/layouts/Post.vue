@@ -61,6 +61,7 @@ export default {
     }
     .noteItem{
       margin:0 10px;
+      display: inline-flex;
     }
     .tags{
       margin:0 10px;
@@ -71,4 +72,24 @@ export default {
   }
 }
 
+@media screen and (max-width: @minWidth) {
+  .postDetail{
+    .title{
+      font-size: 18px;
+      margin:8px 0;
+    }
+    .note {
+      flex-direction: column;
+      .noteItem{
+        margin:0 10px;
+        &:nth-child(2){
+          display: none;
+        }
+      }
+      .tags{
+        display:none;
+      }
+    }
+  }
+}
 </style>

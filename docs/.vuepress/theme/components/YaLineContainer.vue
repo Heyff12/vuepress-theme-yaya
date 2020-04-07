@@ -19,7 +19,7 @@ export default {
 
 .containerOuter{
   width: 100%;
-  padding:0 0 0 10%;
+  padding:0 0 0 @normalPadding;
   background-color: white;
   box-sizing: border-box;
   .containerInner{
@@ -28,14 +28,24 @@ export default {
     border-right:0;
     border-top:0;
     margin:10px 0;
-    padding:20px 10% 20px 20px;
+    padding:20px @normalPadding 20px 20px;
     box-sizing: border-box;
     .containerBody{
       width:100%;
-      padding:10px 10%;
+      padding:10px @normalPadding;
       box-sizing: border-box;
     }
   }
 }
-
+@media screen and (max-width: @minWidth) {
+  .containerOuter{
+    padding:0 0 0 @minPadding;
+    .containerInner{
+      padding:10px @minPadding 10px 20px;
+      .containerBody{
+        padding:10px 0;
+      }
+    }
+  }
+}
 </style>

@@ -8,21 +8,7 @@
             </router-link>
           </div>
           <section class="text">
-            <h4>
-              <i class="iconfont iconbiaoti"></i>
-              <router-link :to="page.path">{{ page.title }}</router-link>
-            </h4>
-            <p class="summary">
-              <router-link :to="page.path">{{page.frontmatter.summary}}</router-link>             
-            </p>
-            <footer>
-              <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
-              <div class="tags">
-                <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`">
-                  <i class="iconfont icontag"></i>{{tag}}
-                </a>
-              </div>
-            </footer>
+            <YaTextContainer :page="page"/>
           </section>
         </li>
       </ul>
@@ -32,18 +18,11 @@
 
 <script>
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
+import YaTextContainer from './YaTextContainer.vue'
 export default {
     name: 'YaWorkList',
     components: {
-      Pagination
-    },
-    mounted(){
-        console.log(this.$page)
-        console.log(this.$frontmatter)
-        console.log(this.$frontmatterKey)
-        // console.log(this.$frontmatterKey.list)
-        console.log(this.$pagination)
-        console.log(this.$pagination.pages)
+      Pagination,YaTextContainer
     }
 }
 </script>
@@ -80,42 +59,7 @@ export default {
       }
     }
     .text{
-      padding:10px 20px;
-    }
-    h4{
-      margin-bottom: 15px;
-      i{
-        color:@themeColor;
-        font-size: 20px;
-        padding-right: 10px;
-      }
-      a{
-        font-size: 18px;
-      }
-    }
-    .summary{
-      margin-bottom: 10px;
-      color:@grey;
-      a {
-        color:@grey;
-        &:hover{
-          color:@grey;
-        }
-      }
-    }
-    footer {
-      display: flex;
-      flex-direction: row;
-      color:@grey;
-      justify-content: space-between;
-      i{
-        padding-right: 5px;
-      }
-      .tags{
-        a{
-          padding-left:10px;
-        }
-      }
+      width: 100%;
     }
     &:hover{
       .img {
@@ -128,14 +72,17 @@ export default {
   }
 }
 }
-
-@keyframes rotate
-{
-  from {
-    transform:rotate(0deg)
-  }
-  to {
-    transform:rotate(-360deg)
+@media screen and (max-width: @minWidth) {
+  .titleListContainer{
+    .pageListItem{
+      li{
+        width:100%;
+        margin:10px 0;
+        .img{
+          max-height: 200px;
+        }
+      }
+    }
   }
 }
 </style>

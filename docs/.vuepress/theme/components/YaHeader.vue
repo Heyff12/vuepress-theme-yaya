@@ -1,7 +1,9 @@
 <template>
     <section class="header">
         <section class="headerInner">
-            <!-- <SearchBox/> -->
+            <!-- <section class="headerSearch">
+                <SearchBox />
+            </section> -->
             <section class="headerBody">
                 <section class="logo">
                     <a href="/">
@@ -50,8 +52,9 @@ export default {
 
 .header{
     width:100%;
+    min-width: 320px;
     height: 104px;
-    padding:0 10% 0 0;
+    padding:0 @normalPadding 0 0;
     margin:0;
     // border-bottom: 1px solid @shadowColor;
     // box-shadow: 0px 1px 20px @shadowColor;
@@ -67,9 +70,15 @@ export default {
         border-left:0;
         border-top:0;
         margin:10px 0;
-        padding:0 0 0 10%;
+        padding:0 0 0 @normalPadding;
         box-sizing: border-box;
+        .headerSearch{
+            width:100%;
+            display: flex;
+            justify-content: center;
+        }
         .headerBody{
+            // height: 40px;
             height: 100%;
             display: flex;
             flex-direction: row;
@@ -119,6 +128,29 @@ export default {
                             opacity: 1;
                             top: 0px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: @minWidth) {
+    .header{
+        padding:0 @minPadding 0 0;
+        .headerInner{
+            padding:0 0 0 @minPadding;
+            .headerBody{
+                flex-direction: column;
+                .logo{
+                    width: 95px;
+                    img{
+                        height: 25px;
+                    }
+                }
+                .menu {
+                    .linkItem{
+                        min-width: 30px;
+                        padding: 0 5px;
                     }
                 }
             }

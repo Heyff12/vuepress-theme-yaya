@@ -8,6 +8,7 @@
     --active-file-border-color: #393894;
     --item-hover-text-color: #393894;
 }
+@import './variables.less';
 
 html {
     font-size: .925rem;
@@ -31,16 +32,15 @@ html {
 .markdownBody {
     background: none;
     font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #2e2e2e;
+    color: @textColor;
     line-height: 1.6;
     height: 100%;
-    font-size: .925rem;
     margin: 0 auto;
     padding-bottom: 100px;
     position: static;
     width: 100%;
     a {
-        color: #1b69b6;
+        color: @themoColor;
     }
     
     h1,
@@ -139,7 +139,8 @@ html {
     
     ul li,
     ol li {
-        line-height: 1.2;
+        line-height: 1.8;
+        list-style: disc;
     }
     
     li>ol,
@@ -151,7 +152,7 @@ html {
         height: 2px;
         padding: 0;
         margin: 16px 0;
-        background-color: #e7e7e7;
+        background-color: @borderColor;
         border: 0 none;
         overflow: hidden;
         box-sizing: content-box;
@@ -166,10 +167,7 @@ html {
         padding-left: 30px;
     }
     
-    ul:first-child,
-    ol:first-child {
-        margin-top: 0;
-    }
+   
     
     ul:last-child,
     ol:last-child {
@@ -179,9 +177,9 @@ html {
     blockquote {
         border-left: 4px solid #dfe2e5;
         font-family: 'Hack';
-        font-size: 13px;
+        font-size: 14px;
         padding: 0 15px;
-        color: #707070;
+        color: @textColor
     }
     
     blockquote blockquote {
@@ -251,7 +249,6 @@ html {
     code {
         padding: 2px 4px;
         color: #c0341d;
-        background-color: #fbe5e1;
         border-radius: 4px;
     }
     
@@ -266,10 +263,7 @@ html {
         margin-left: -1.3em;
     }
     
-    ul:first-child,
-    ol:first-child {
-        margin-top: 30px;
-    }
+    
     
     
     .md-fences {

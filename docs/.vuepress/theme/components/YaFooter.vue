@@ -19,21 +19,29 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../styles/variables';
+
 .footer{
-    height: 45px;
+    min-height: 45px;
     display: flex;
     flex-direction: row;
     font-size: 12px;
     color: #829ebb;
     width:100%;
-    padding:0 10%;
+    padding:0 @normalPadding;
     box-sizing: border-box;
     justify-content: space-between;
-    margin-top:35px;
+    margin:35px 0;
     .footer_content{
         span{
             padding:0 5px;
         }
+    }
+}
+@media screen and (max-width: @minWidth) {
+    .footer{
+        padding:0 @minPadding;
+        flex-direction: column;
     }
 }
 </style>
