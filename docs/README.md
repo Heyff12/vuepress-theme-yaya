@@ -1,1 +1,5 @@
-# Hello VuePress!
+---
+title: '首页'
+layout: Index
+---
+

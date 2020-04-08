@@ -1,6 +1,6 @@
 <template>
     <section class="header">
-        <section class="headerInner">
+        <section class="headerInner" :style="{borderColor:color}">
             <!-- <section class="headerSearch">
                 <SearchBox />
             </section> -->
@@ -27,6 +27,8 @@
 
 <script>
 import SearchBox from '@SearchBox'
+import { changeColor } from '../utils/changeColor'
+
 export default {
     name: 'YaHeader',
     components: {
@@ -35,6 +37,7 @@ export default {
     data(){
         return {
             navLinkList: [],
+            color:'',
             currentNav: '/',
         }
     },
@@ -43,6 +46,9 @@ export default {
         console.log(this.$site)
         this.navLinkList = this.$site.themeConfig.locales['/'].nav;
         this.currentNav = this.$route.path
+        const color = changeColor(true)
+        this.color = color
+        localStorage.setItem("color", color);
     }
 }
 </script>

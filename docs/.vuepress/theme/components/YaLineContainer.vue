@@ -1,7 +1,7 @@
 <template>
     <section class="containerOuter">
-      <section class="containerInner">
-        <section class="bodyPadding color">
+      <section class="containerInner" :style="{borderColor:color}">
+        <section class="bodyPadding color" :style="{backgroundColor:color}">
           <section class="containerHeader">
             <slot name="header"></slot>
           </section>
@@ -16,8 +16,17 @@
 </template>
 
 <script>
+import { changeColor } from '../utils/changeColor'
 export default {
-    name: 'YaLineContainer'
+    name: 'YaLineContainer',
+    data(){
+      return {
+        color:''
+      }
+    },
+    mounted(){
+        this.color = changeColor(false)
+    }
 }
 </script>
 
