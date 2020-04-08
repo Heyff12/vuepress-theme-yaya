@@ -46,9 +46,7 @@ export default {
         console.log(this.$site)
         this.navLinkList = this.$site.themeConfig.locales['/'].nav;
         this.currentNav = this.$route.path
-        const color = changeColor(true)
-        this.color = color
-        localStorage.setItem("color", color);
+        this.color = changeColor(true)
     }
 }
 </script>

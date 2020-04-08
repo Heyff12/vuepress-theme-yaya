@@ -10,10 +10,15 @@ const changeColor = (isChange)=>{
         return color
     }
     const index = colors.findIndex(item => item === color)
+    let currentColor = ''
     if(index === -1 || index === (colors.length-1)){
-        return colors[0]
+        currentColor =  colors[0]
+    }else{
+        currentColor =  colors[index+1]
     }
-    return colors[index+1]
+    localStorage.setItem("color", currentColor);
+
+    return currentColor
 }
 
 
