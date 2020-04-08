@@ -48,6 +48,7 @@ export default {
     margin: 15px;
     overflow: hidden;
     padding:0 20px;
+    cursor: pointer;
     &:nth-child(2n){
       background-color: @minixColor2;
     }

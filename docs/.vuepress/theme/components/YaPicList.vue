@@ -75,12 +75,16 @@ export default {
     .pageListItem{
       li{
         margin:10px 0;
+        flex-direction: column;
         .left{
           padding:0;
+          order:2;
+          background-color: rgba(255, 255, 255, .8);
         }
         .right{
-          width:80px;
-          max-height: 80px;
+          width:100%;
+          max-height:240px;
+          order:1;
         }
       }
     }

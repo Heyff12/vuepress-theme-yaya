@@ -43,7 +43,7 @@ module.exports = {
                     { text: '作品', link: '/works/', english: 'Works' },
                     { text: '读书', link: '/reading/', english: 'Reading' },
                     { text: '随笔', link: '/writing/', english: 'Writing' },
-                    { text: '标签', link: '/tags/', english: 'Tags' },
+                    // { text: '标签', link: '/tags/', english: 'Tags' },
                     // { text: '分类', link: '/categories/' , english: 'categories'},
                     { text: '关于', link: '/about/', english: 'About' },
                 ]

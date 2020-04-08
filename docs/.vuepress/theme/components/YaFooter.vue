@@ -1,7 +1,8 @@
 <template>
     <section class="footer">
         <section class="footer_link">
-            <a href="https://github.com/Heyff12/vuepress-blog-yaya">GitHub</a>
+            <a href="https://github.com/Heyff12/vuepress-blog-yaya" target="_blank">GitHub</a>|
+            <a href="/tags">标签</a>
         </section>
         <section class="footer_content">
             <span>Author By Yaya</span>|
@@ -25,13 +26,18 @@ export default {
     min-height: 45px;
     display: flex;
     flex-direction: row;
-    font-size: 12px;
+    font-size: 14px;
     color: #829ebb;
     width:100%;
     padding:0 @normalPadding;
     box-sizing: border-box;
     justify-content: space-between;
     margin:35px 0;
+    .footer_link{
+        a{
+            padding: 0 5px;
+        }
+    }
     .footer_content{
         span{
             padding:0 5px;

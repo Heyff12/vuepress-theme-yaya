@@ -1,10 +1,17 @@
 <template>
     <section class="containerOuter">
-    <section class="containerInner">
-      <section class="containerBody">
-          <slot></slot>
+      <section class="containerInner">
+        <section class="bodyPadding color">
+          <section class="containerHeader">
+            <slot name="header"></slot>
+          </section>
+        </section>
+        <section class="bodyPadding">
+          <section class="containerBody">
+            <slot></slot>
+          </section>
+        </section>
       </section>
-    </section>
     </section>
 </template>
 
@@ -27,12 +34,23 @@ export default {
     border:3px solid @borderColorTheme;
     border-right:0;
     border-top:0;
+    padding-top:15px;
     margin:10px 0;
-    padding:20px @normalPadding 20px 20px;
-    box-sizing: border-box;
-    .containerBody{
+    .bodyPadding{
+      padding:0 @normalPadding 0 20px;
+      &.color{
+        background-color: @themeColor;
+        // background: linear-gradient(270deg,#0083b0,#00b4db);
+      }
+    }
+    .containerHeader{
+      height: auto;
       width:100%;
-      padding:10px @normalPadding;
+    }
+    .containerBody{
+      box-sizing: border-box;
+      width:100%;
+      padding:25px 5%;
       box-sizing: border-box;
     }
   }
@@ -41,9 +59,8 @@ export default {
   .containerOuter{
     padding:0 0 0 @minPadding;
     .containerInner{
-      padding:10px @minPadding 10px 20px;
       .containerBody{
-        padding:10px 0;
+        padding:20px 0;
       }
     }
   }
