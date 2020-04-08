@@ -25,34 +25,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '../styles/variables';
+@import '../styles/pageTitleList';
 
 .titleListContainer{
   width: 100%;
-  .pageListItem{
-    width:100%;
-    li{
-      width:100%;
-      background-color: white;
-      border-bottom:1px solid @borderColor;
-      border-radius: 5px;
-      padding:20px;
-      box-sizing: border-box;
-      margin:20px auto;
-      &:hover{
-        box-shadow: 0px 1px 10px @shadowColor;
-      }
-    }
-  }
-}
-@media screen and (max-width: @minWidth) {
-  .titleListContainer{
-    .pageListItem{
-      li{
-        padding:10px 0;
-        margin:10px auto;
-      }
-    }
-  }
 }
 </style>
