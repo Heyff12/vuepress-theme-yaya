@@ -1,5 +1,10 @@
 <template>
   <YaLineContainer>
+    <template v-slot:header>
+      <YaPageHeader 
+        :showBack="true"
+      />
+    </template>
     <ul class="tagsList">
       <li v-for="tag in $frontmatterKey.list">
         <router-link :to="tag.path">
@@ -14,11 +19,12 @@
 
 <script>
 
+import YaPageHeader from '../components/YaPageHeader'
 import YaLineContainer from '../components/YaLineContainer'
 export default {
     name:'FrontmatterKey',
     components: {
-      YaLineContainer
+      YaLineContainer,YaPageHeader
     },
     computed: {
     },

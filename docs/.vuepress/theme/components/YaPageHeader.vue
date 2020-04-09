@@ -1,13 +1,18 @@
 <template>
   <section class="pageHeader">  
-    <ul :class="{'show':dynamicData.length || current}">
-      <li v-for="(item,index) in dynamicData" :key="index">
-        <a :href="item.url">{{item.name}}</a>
-      </li>
-      <template v-if="current">
-        <li class="current">{{current}}</li>
-      </template>
-    </ul>
+    <section :class="['pageHeaderLeft',{'show':dynamicData.length || current || showBack}]">
+      <p  v-if="showBack" class="back" @click="$router.go(-1)">
+        <i class="iconfont iconfanhui"></i>返回
+      </p>
+      <ul>
+        <li v-for="(item,index) in dynamicData" :key="index">
+          <a :href="item.url">{{item.name}}</a>
+        </li>
+        <template v-if="current">
+          <li class="current">{{current}}</li>
+        </template>
+      </ul>
+    </section>
     <section class="headerSearch" v-if="showSearch">
       <SearchBox />
     </section>
@@ -30,12 +35,19 @@ export default {
       dynamicData: {
         type: Array,
         required: false,
-        default: []
+        default: function () {
+          return []
+        }
       },
       showSearch: {
         type: Boolean,
         required: false,
         default: true
+      },
+      showBack: {
+        type: Boolean,
+        required: false,
+        default: false
       }
     }
 }
@@ -51,15 +63,29 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  .pageHeaderLeft{
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &.show{
+      padding:15px 0;
+    }
+    .back{
+      font-weight: 500;
+      padding-right: 15px;
+      cursor: pointer;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
   ul{
     display: flex;
     flex-direction: row;
     align-items: center;
     font-weight: 500;
     padding:0;
-    &.show{
-      padding:15px 0;
-    }
     li {
       margin-right: 10px;
       box-sizing: border-box;

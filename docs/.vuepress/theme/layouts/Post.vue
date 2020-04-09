@@ -1,5 +1,11 @@
 <template>
   <YaLineContainer>
+    <template v-slot:header>
+      <YaPageHeader 
+        :showSearch="false"
+        :showBack="true"
+      />
+    </template>
     <section class="postDetail">
       <h3 class="title">{{$page.title}}</h3>
       <section class="note">
@@ -20,12 +26,13 @@
 </template>
 
 <script>
+import YaPageHeader from '../components/YaPageHeader'
 import YaLineContainer from '../components/YaLineContainer'
 import YaComment from '../components/YaComment'
 export default {
     name:'Post',
     components: {
-      YaLineContainer,YaComment
+      YaLineContainer,YaComment,YaPageHeader
     },
     mounted () {
       console.log(this.$page)
