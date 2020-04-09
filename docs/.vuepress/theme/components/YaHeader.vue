@@ -1,9 +1,6 @@
 <template>
     <section class="header">
         <section class="headerInner" :style="{borderColor:color}">
-            <!-- <section class="headerSearch">
-                <SearchBox />
-            </section> -->
             <section class="headerBody">
                 <section class="logo">
                     <a href="/">
@@ -26,13 +23,11 @@
 </template>
 
 <script>
-import SearchBox from '@SearchBox'
 import { changeColor } from '../utils/changeColor'
 
 export default {
     name: 'YaHeader',
     components: {
-        SearchBox
     },
     data(){
         return {
@@ -76,11 +71,6 @@ export default {
         margin:10px 0;
         padding:0 0 0 @normalPadding;
         box-sizing: border-box;
-        .headerSearch{
-            width:100%;
-            display: flex;
-            justify-content: center;
-        }
         .headerBody{
             // height: 40px;
             height: 100%;

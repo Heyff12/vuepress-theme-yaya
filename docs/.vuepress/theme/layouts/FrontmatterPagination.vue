@@ -3,7 +3,6 @@
     <template v-slot:header>
       <YaPageHeader 
         :dynamicData="[{name:'All Tags',url:'/tags/'}]"
-        :showStatic="true"
         :current="$frontmatter.title.replace(' Tags','')"
       />
     </template>

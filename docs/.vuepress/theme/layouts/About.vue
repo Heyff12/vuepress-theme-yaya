@@ -2,9 +2,8 @@
   <YaLineContainer>
     <template v-slot:header>
       <YaPageHeader 
-        :dynamicData="[]"
-        :showStatic="true"
         current="关于我"
+        :showSearch="false"
       />
     </template>
     <section class="about">

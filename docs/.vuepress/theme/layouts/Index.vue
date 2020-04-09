@@ -2,8 +2,6 @@
   <YaLineContainer>
     <template v-slot:header>
       <YaPageHeader 
-        :dynamicData="[]"
-        :showStatic="true"
         current="Index"
       />
     </template>
