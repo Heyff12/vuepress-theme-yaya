@@ -23,7 +23,7 @@
                 <i class="iconfont iconzuozhe"></i>{{page.frontmatter.author}}
               </p>
               <div class="tags">
-                <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`">
+                <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`" :key="tag">
                   <i class="iconfont icontag"></i>{{tag}}
                 </a>
               </div>

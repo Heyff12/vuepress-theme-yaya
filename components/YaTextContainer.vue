@@ -11,7 +11,7 @@
       <footer>
         <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
         <div class="tags">
-          <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`">
+          <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
           </a>
         </div>
