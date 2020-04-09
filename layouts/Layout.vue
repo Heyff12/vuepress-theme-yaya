@@ -7,9 +7,9 @@
   </YaLineContainer>
 </template>
 <script>
-import YaPageHeader from '../components/YaPageHeader'
-import YaLineContainer from '../components/YaLineContainer'
-import YaTitleList from '../components/YaTitleList'
+import YaPageHeader from '@theme/components/YaPageHeader'
+import YaLineContainer from '@theme/components/YaLineContainer'
+import YaTitleList from '@theme/components/YaTitleList'
 export default {
     name:'Layout',
     components: {

@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import YaHeader from '../components/YaHeader'
-import YaFooter from '../components/YaFooter'
+import YaHeader from '@theme/components/YaHeader'
+import YaFooter from '@theme/components/YaFooter'
 export default {
     name:'GlobalLayout',
     components: {

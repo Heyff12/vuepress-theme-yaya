@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { changeColor } from '../utils/changeColor'
+import { changeColor } from '@theme/utils/changeColor'
 export default {
     name: 'YaLineContainer',
     data(){

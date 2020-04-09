@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import YaLineContainer from '../components/YaLineContainer'
+import YaLineContainer from '@theme/components/YaLineContainer'
 export default {
   name: 'NotFound',
   components: {

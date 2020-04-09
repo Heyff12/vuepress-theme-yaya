@@ -12,7 +12,7 @@
         <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
         <span class="noteItem"><i class="iconfont iconbook"></i>{{$page.lastUpdated}}</span>
         <div class="tags">
-          <a v-for="tag in $frontmatter.tags" :href="`/tags/${tag}`">
+          <a v-for="tag in $frontmatter.tags" :href="`/tags/${tag}`" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
           </a>
         </div>
@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import YaPageHeader from '../components/YaPageHeader'
-import YaLineContainer from '../components/YaLineContainer'
-import YaComment from '../components/YaComment'
+import YaPageHeader from '@theme/components/YaPageHeader'
+import YaLineContainer from '@theme/components/YaLineContainer'
+import YaComment from '@theme/components/YaComment'
 export default {
     name:'Post',
     components: {

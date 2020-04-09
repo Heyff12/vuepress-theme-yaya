@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import YaLineContainer from '../components/YaLineContainer'
-import YaTitleList from '../components/YaTitleList'
-import YaPageHeader from '../components/YaPageHeader'
+import YaLineContainer from '@theme/components/YaLineContainer'
+import YaTitleList from '@theme/components/YaTitleList'
+import YaPageHeader from '@theme/components/YaPageHeader'
 
 export default {
     name:'FrontmatterPagination',

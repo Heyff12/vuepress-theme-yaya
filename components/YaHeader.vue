@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { changeColor } from '../utils/changeColor'
+import { changeColor } from '@theme/utils/changeColor'
 
 export default {
     name: 'YaHeader',
@@ -39,7 +39,7 @@ export default {
     mounted(){
         console.log(this.$route)
         console.log(this.$site)
-        this.navLinkList = this.$site.themeConfig.locales['/'].nav;
+        this.navLinkList = this.$site.themeConfig.nav;
         this.currentNav = this.$route.path
         this.color = changeColor(true)
     }

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import YaPageHeader from '../components/YaPageHeader'
-import YaLineContainer from '../components/YaLineContainer'
-import YaPicContainer from '../components/YaPicContainer.vue'
+import YaPageHeader from '@theme/components/YaPageHeader'
+import YaLineContainer from '@theme/components/YaLineContainer'
+import YaPicContainer from '@theme/components/YaPicContainer.vue'
 
 export default {
   name: 'Index',
