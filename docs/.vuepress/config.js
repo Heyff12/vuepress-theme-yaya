@@ -17,6 +17,7 @@ module.exports = {
             description: "blog,IT development,front-end,IT,web desing"
         }
     },
+    theme: require.resolve('../../'),
     themeConfig: {
         logo: '/logo.png',
         search: true,

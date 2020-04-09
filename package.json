@@ -7,7 +7,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "author": "",
+  "author": "yaya",
   "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.4.0",
