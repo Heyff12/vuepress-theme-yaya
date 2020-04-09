@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import YaPicContainer from '@theme/YaPicContainer.vue'
+import YaPicContainer from './YaPicContainer.vue'
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 export default {
     name: 'YaPicList',

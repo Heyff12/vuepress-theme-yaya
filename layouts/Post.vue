@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import YaPageHeader from '@theme/components/YaPageHeader'
-import YaLineContainer from '@theme/components/YaLineContainer'
-import YaComment from '@theme/components/YaComment'
+import YaPageHeader from '../components/YaPageHeader'
+import YaLineContainer from '../components/YaLineContainer'
+import YaComment from '../components/YaComment'
 export default {
     name:'Post',
     components: {

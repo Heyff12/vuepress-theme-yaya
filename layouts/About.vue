@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import YaPageHeader from '@theme/components/YaPageHeader'
-import YaLineContainer from '@theme/components/YaLineContainer'
+import YaPageHeader from '../components/YaPageHeader'
+import YaLineContainer from '../components/YaLineContainer'
 export default {
   name: 'About',
   components: {

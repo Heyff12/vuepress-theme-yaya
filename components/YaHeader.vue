@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { changeColor } from '@theme/utils/changeColor'
+import { changeColor } from '../utils/changeColor'
 
 export default {
     name: 'YaHeader',

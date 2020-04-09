@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import YaTextContainer from '@theme/YaTextContainer.vue'
+import YaTextContainer from './YaTextContainer.vue'
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
 export default {
     name: 'YaTitleList',

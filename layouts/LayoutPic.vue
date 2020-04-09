@@ -7,9 +7,9 @@
   </YaLineContainer>
 </template>
 <script>
-import YaLineContainer from '@theme/components/YaLineContainer'
-import YaPageHeader from '@theme/components/YaPageHeader'
-import YaPicList from '@theme/components/YaPicList'
+import YaLineContainer from '../components/YaLineContainer'
+import YaPageHeader from '../components/YaPageHeader'
+import YaPicList from '../components/YaPicList'
 export default {
     name:'LayoutPic',
     components: {

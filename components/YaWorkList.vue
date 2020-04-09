@@ -18,7 +18,7 @@
 
 <script>
 import { Pagination } from '@vuepress/plugin-blog/lib/client/components'
-import YaTextContainer from '@theme/YaTextContainer.vue'
+import YaTextContainer from './YaTextContainer.vue'
 export default {
     name: 'YaWorkList',
     components: {

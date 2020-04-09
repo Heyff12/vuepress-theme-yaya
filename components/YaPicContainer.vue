@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import YaTextContainer from '@theme/YaTextContainer.vue'
+import YaTextContainer from './YaTextContainer.vue'
 export default {
     name: 'YaPicContainer',
     components: {
