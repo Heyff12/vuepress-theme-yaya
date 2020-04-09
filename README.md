@@ -13,7 +13,7 @@
 ## 🚧 安装
 
 ```
-npm i vuepress-theme-丫丫
+npm i vuepress-theme-yaya
 ```
 
 ## 🔧 主题设置
