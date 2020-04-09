@@ -5,8 +5,8 @@
         current="Index"
       />
     </template>
-    <section class="about">
-      <ul class="pageListItem">
+    <section class="index">
+      <ul class="pagePicListItem">
         <li v-for="(page,index) in allList" :key="index">
           <YaPicContainer :page="page"/>
         </li>
@@ -43,50 +43,10 @@ export default {
 
 <style lang="less" scoped>
 @import '../styles/variables';
-@import '../styles/pageTitleList';
+@import '../styles/YaPicContainer';
+@import '../styles/YaPicList';
 
-.listHeader{
+.index{
   width:100%;
-  padding:15px 0;
-  color:white;
-  ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: 500;
-    li {
-      margin-right: 10px;
-      box-sizing: border-box;
-      position:relative;
-      padding-right: 15px;
-      &:after{
-        content: "/";
-        position: absolute;
-        right: 0;
-      }
-      &:last-child{
-        padding-right: 0;
-        &:after{
-          display:none;
-        }
-      }
-      &.current{
-        border-bottom: 3px solid white;
-      }
-    }
-    a {
-      color:white;
-    }
-  }
-}
-
-.about{
-  padding:20px 0;
-    display: flex;
-    flex-direction: column;
-    p{
-      text-indent: 2em;
-      margin:10px 0;
-    }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <section class="titleListContainer">
-      <ul class="pageListItem">
+      <ul class="pagePicListItem">
         <li v-for="(page,index) in $pagination.pages" :key="index">
           <YaPicContainer :page="page" />
         </li>
@@ -22,31 +22,9 @@ export default {
 
 <style lang="less" scoped>
 @import '../styles/variables';
+@import '../styles/YaPicList';
 
 .titleListContainer{
   width: 100%;
-  .pageListItem{
-    width:100%;
-    li{
-      width:100%;
-      background-color: white;
-      border-bottom:1px solid @borderColor;
-      border-radius: 5px;
-      margin:20px auto;
-      overflow: hidden;
-      &:hover{
-        box-shadow: 0px 1px 10px @shadowColor;
-      }
-    }
-  }
-}
-@media screen and (max-width: @minWidth) {
-  .titleListContainer{
-    .pageListItem{
-      li{
-        margin:10px 0;
-      }
-    }
-  }
 }
 </style>
