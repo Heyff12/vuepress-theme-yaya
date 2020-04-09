@@ -28,8 +28,8 @@ export default {
         console.log(this.$frontmatter)
         console.log(this.$frontmatterKey)
         // console.log(this.$frontmatterKey.list)
-        // console.log(this.$pagination)
-        // console.log(this.$pagination.pages)
+        console.log(this.$pagination)
+        console.log(this.$pagination && this.$pagination.pages)
     }
 }
 </script>
