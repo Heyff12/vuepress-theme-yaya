@@ -8,7 +8,7 @@
     <section class="about">
       <ul class="pageListItem">
         <li v-for="(page,index) in allList" :key="index">
-          <YaTextContainer :page="page"/>
+          <YaPicContainer :page="page"/>
         </li>
       </ul>
     </section>
@@ -18,12 +18,12 @@
 <script>
 import YaPageHeader from '../components/YaPageHeader'
 import YaLineContainer from '../components/YaLineContainer'
-import YaTextContainer from '../components/YaTextContainer.vue'
+import YaPicContainer from '../components/YaPicContainer.vue'
 
 export default {
   name: 'Index',
   components: {
-    YaLineContainer,YaPageHeader,YaTextContainer
+    YaLineContainer,YaPageHeader,YaPicContainer
   },
   data(){
     return {
