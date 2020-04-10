@@ -121,7 +121,7 @@ module.exports = {
                         // itemlayout: 'Layout',
                     }, {
                         id: "categories",         // 再 Vue 实例中的名称
-                        keys: ['category'],
+                        keys: ['categories'],
                         path: '/categories/',
                         layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
                         frontmatter: { title: '分类检索文章' },

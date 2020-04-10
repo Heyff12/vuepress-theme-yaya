@@ -6,9 +6,9 @@ bookName: '白帽子将WEB安全'
 tags: 
   - 是你
   - 莎士比亚
-category: 
-  - vue
-  - vuepress
+categories:
+  - Life
+  - Vue
 ---
 
 ## reading

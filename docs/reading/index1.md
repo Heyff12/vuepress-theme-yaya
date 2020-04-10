@@ -3,9 +3,13 @@ title: '阅读33'
 # layout: 'List'
 tags: 
   - haha
-category: 
-  - vue
----
-# reading
+categories:
+  - Life
+  - Vue
+---  
+
+
+# reading  
+
 
 On the way.
