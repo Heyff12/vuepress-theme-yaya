@@ -19,14 +19,33 @@ module.exports = {
             { text: '读书', link: '/reading/', english: 'Reading' },
             { text: '随笔', link: '/writing/', english: 'Writing' },
             { text: '关于', link: '/about/', english: 'About' },
-        ]
+        ],
+        footer: {
+            author: 'Yaya',
+            reference:'豫ICP备14017364号-1',
+            leftLinks: [
+                { text: 'Github', link: 'https://github.com/Heyff12/vuepress-blog-yaya' },
+                { text: '标签', link: '/tags' },
+            ],
+        }
     },
     markdown: {
         lineNumbers: true
     },
     plugins: [
         '@vuepress/back-to-top',
-        '@vuepress/last-updated',
+        [
+            '@vuepress/last-updated',
+            {
+              transformer: (timestamp, lang) => {
+                // 不要忘了安装 moment
+                const moment = require('moment')
+                moment.locale(lang)
+                return moment().format('YYYY-MM-D')
+                return moment(timestamp).fromNow()
+              }
+            }
+        ],
         '@vuepress/plugin-nprogress',
         ['@vuepress/search', {
             searchMaxSuggestions: 6
@@ -108,12 +127,6 @@ module.exports = {
                         frontmatter: { title: '分类检索文章' },
                     },
                 ],
-                // comment: {
-                //     // Which service you'd like to use
-                //     service: 'disqus',
-                //     // The owner's name of repository to store the issues and comments.
-                //     shortname: 'vuepress-plugin-blog',
-                //   },
             },
         ],
     ]

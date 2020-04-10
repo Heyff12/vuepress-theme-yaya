@@ -1,14 +1,19 @@
 <template>
     <section class="footer">
         <section class="footer_link">
-            <a href="https://github.com/Heyff12/vuepress-blog-yaya" target="_blank">GitHub</a>|
-            <a href="/tags">标签</a>
+            <a 
+                v-for="(link,index) in $site.themeConfig.footer.leftLinks" 
+                :key="index" :href="link.link" 
+                :target="/^\//.test(link.link) ? '_self' : '_blank'"
+            >
+                {{link.text}}
+            </a>
         </section>
         <section class="footer_content">
-            <span>Author By Yaya</span>|
+            <span>Author By {{$site.themeConfig.footer.author}}</span>|
             <span>Powered By <a href="https://v1.vuepress.vuejs.org/zh/guide/">VuePress</a></span>|
             <!-- <span>All rights reserved @Yaya</span>| -->
-            <span>豫ICP备14017364号-1</span>
+            <span>{{$site.themeConfig.footer.reference}}</span>
         </section>
     </section>
 </template>
@@ -35,7 +40,20 @@ export default {
     margin:35px 0;
     .footer_link{
         a{
-            padding: 0 5px;
+            padding: 0 5px 0 5px;
+            position: relative;
+            &:after {
+                content: '|';
+                position: absolute;
+                right: 0;
+                color: @grey;
+                font-weight: normal;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
         }
     }
     .footer_content{
