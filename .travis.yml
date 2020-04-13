@@ -1,9 +1,10 @@
 language: node_js
 node_js:
-  - "12.10.0"
+  - 12.10.0
 brancher:
   only:
-    - "dev"
-    - "master"
+    - dev
+    - master
 install:
-  - "npm install"
+  - npm install
+  - npm run dev
