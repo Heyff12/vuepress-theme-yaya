@@ -9,3 +9,4 @@ install:
   - npm install
   - npm run build
 deploy:
+  skip_cleanup: true
