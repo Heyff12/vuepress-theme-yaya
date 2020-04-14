@@ -8,3 +8,5 @@ brancher:
 install:
   - npm install
   - npm run dev
+deploy:
+  skip_cleanup: true
