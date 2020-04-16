@@ -1,15 +1,4 @@
-import {themeConfig} from '@theme/utils/themeConfig'
-// Merge a `source` object to a `target` recursively
-const merge = (target, source) => {
-  // Iterate through `source` properties and if an `Object` set property to merge of `target` and `source` properties
-  for (let key of Object.keys(source)) {
-    if (source[key] instanceof Object  && key in target) Object.assign(source[key], merge(target[key], source[key]))
-  }
-
-  // Join `target` and modified `source`
-  Object.assign(target || {}, source)
-  return target
-}
+import themeCustomConfig from '@theme/utils/themeCustomConfig'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -18,7 +7,12 @@ export default ({
   siteData // site metadata
 }) => {
 
-  const mergedConfig = merge(themeConfig, siteData)
+  console.log(themeCustomConfig)
+  console.log(siteData)
+  const mergedConfig = {...siteData,...themeCustomConfig}
+  console.log(mergedConfig)
+  siteData = mergedConfig
+  console.log(siteData)
 
-  Object.assign(siteData, mergedConfig)
+  Object.assign(siteData, themeCustomConfig)
 }
