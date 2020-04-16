@@ -23,9 +23,9 @@
                 <i class="iconfont iconzuozhe"></i>{{page.frontmatter.author}}
               </p>
               <div class="tags">
-                <a v-for="tag in page.frontmatter.tags" :href="$withBase(`/tags/${tag}`)" :key="tag">
+                <router-link v-for="tag in page.frontmatter.tags" :to="`/tags/${tag}`" :key="tag">
                   <i class="iconfont icontag"></i>{{tag}}
-                </a>
+                </router-link>
               </div>
             </section>
           </section>

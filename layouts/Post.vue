@@ -12,9 +12,9 @@
         <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
         <span class="noteItem"><i class="iconfont iconbook"></i>{{$page.lastUpdated}}</span>
         <div class="tags">
-          <a v-for="tag in $frontmatter.tags" :href="$withBase(`/tags/${tag}`)" :key="tag">
+          <router-link v-for="tag in $frontmatter.tags" :to="`/tags/${tag}`" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
-          </a>
+          </router-link>
         </div>
       </section>
       <section class="markdownBody">  

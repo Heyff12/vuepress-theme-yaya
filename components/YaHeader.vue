@@ -3,15 +3,15 @@
         <section class="headerInner" :style="{borderColor:color}">
             <section class="headerBody">
                 <section class="logo">
-                    <a :href="$withBase('/')">
+                    <router-link :to="$localePath">
                         <img :src="$withBase($site.themeConfig.logo)" alt="Yaya's blog" />
-                    </a>
+                    </router-link>
                 </section>
                 <section class="menu">
                     <section  :class="['linkItem',{'active':currentNav.indexOf(item.link)>-1}]"  v-for="(item,index) in navLinkList" :key="index">
-                        <a :href="$withBase(item.link)">
+                        <router-link :to="item.link">
                             {{item.text}}
-                        </a>
+                        </router-link>
                         <div class="hiddenText">
                             {{item.english}}
                         </div>

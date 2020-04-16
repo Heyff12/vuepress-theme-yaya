@@ -7,12 +7,8 @@ export default ({
   siteData // site metadata
 }) => {
 
-  console.log(themeCustomConfig)
+  siteData = {...siteData,...themeCustomConfig}
+  // console.log(Object.assign(siteData, themeCustomConfig))
   console.log(siteData)
-  const mergedConfig = {...siteData,...themeCustomConfig}
-  console.log(mergedConfig)
-  siteData = mergedConfig
-  console.log(siteData)
-
-  Object.assign(siteData, themeCustomConfig)
+  
 }

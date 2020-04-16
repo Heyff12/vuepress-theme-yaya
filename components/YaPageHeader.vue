@@ -6,7 +6,7 @@
       </p>
       <ul>
         <li v-for="(item,index) in dynamicData" :key="index">
-          <a :href="$withBase(item.url)">{{item.name}}</a>
+          <router-link :to="item.url">{{item.name}}</router-link>
         </li>
         <template v-if="current">
           <li class="current">{{current}}</li>
