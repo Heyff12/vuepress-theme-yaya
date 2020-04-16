@@ -4,7 +4,7 @@
         <li v-for="(page,index) in $pagination.pages" :key="index">
           <div class="img">
             <router-link :to="page.path">
-              <img :src="page.frontmatter.imgBg || $site.themeConfig.bookListBg" alt="Yaya's blog">
+              <img :src="$withBase(page.frontmatter.imgBg) || $withBase($site.themeConfig.bookListBg)" alt="Yaya's blog">
             </router-link>
           </div>
           <section class="text">
@@ -23,7 +23,7 @@
                 <i class="iconfont iconzuozhe"></i>{{page.frontmatter.author}}
               </p>
               <div class="tags">
-                <a v-for="tag in page.frontmatter.tags" :href="`/tags/${tag}`" :key="tag">
+                <a v-for="tag in page.frontmatter.tags" :href="$withBase(`/tags/${tag}`)" :key="tag">
                   <i class="iconfont icontag"></i>{{tag}}
                 </a>
               </div>

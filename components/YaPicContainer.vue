@@ -6,7 +6,7 @@
       <section class="right">
         <div class="img">
           <router-link :to="page.path">
-            <img :src="page.frontmatter.imgBg || $site.themeConfig.bookListBg" alt="Yaya's blog">
+            <img :src="$withBase(page.frontmatter.imgBg) || $withBase($site.themeConfig.bookListBg)" alt="Yaya's blog">
           </router-link>
         </div>
       </section>

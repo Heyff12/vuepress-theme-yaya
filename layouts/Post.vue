@@ -12,7 +12,7 @@
         <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
         <span class="noteItem"><i class="iconfont iconbook"></i>{{$page.lastUpdated}}</span>
         <div class="tags">
-          <a v-for="tag in $frontmatter.tags" :href="`/tags/${tag}`" :key="tag">
+          <a v-for="tag in $frontmatter.tags" :href="$withBase(`/tags/${tag}`)" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
           </a>
         </div>

@@ -3,7 +3,8 @@
         <section class="footer_link">
             <a 
                 v-for="(link,index) in $site.themeConfig.footer.leftLinks" 
-                :key="index" :href="link.link" 
+                :key="index" 
+                :href="$withBase(link.link)" 
                 :target="/^\//.test(link.link) ? '_self' : '_blank'"
             >
                 {{link.text}}

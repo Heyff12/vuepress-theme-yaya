@@ -3,13 +3,13 @@
         <section class="headerInner" :style="{borderColor:color}">
             <section class="headerBody">
                 <section class="logo">
-                    <a href="/">
-                        <img :src="$site.themeConfig.logo" alt="Yaya's blog" />
+                    <a :href="$withBase('/')">
+                        <img :src="$withBase($site.themeConfig.logo)" alt="Yaya's blog" />
                     </a>
                 </section>
                 <section class="menu">
                     <section  :class="['linkItem',{'active':currentNav.indexOf(item.link)>-1}]"  v-for="(item,index) in navLinkList" :key="index">
-                        <a :href="item.link">
+                        <a :href="$withBase(item.link)">
                             {{item.text}}
                         </a>
                         <div class="hiddenText">
