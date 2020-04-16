@@ -4,7 +4,7 @@
         <li v-for="(page,index) in $pagination.pages" :key="index">
           <div class="img">
             <router-link :to="page.path">
-              <img :src="page.frontmatter.imgBg || $withBase($site.themeConfig.workListBg)" alt="Yaya's blog">
+              <img :src="$withBase(page.frontmatter.imgBg || $site.themeConfig.workListBg)" alt="Yaya's blog">
             </router-link>
           </div>
           <section class="text">
