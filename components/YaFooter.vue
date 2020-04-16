@@ -4,7 +4,7 @@
             <a 
                 v-for="(link,index) in $site.themeConfig.footer.leftLinks" 
                 :key="index" 
-                :href="$withBase(link.link)" 
+                :href="/^\//.test(link.link) ? $withBase(link.link) : link.link" 
                 :target="/^\//.test(link.link) ? '_self' : '_blank'"
             >
                 {{link.text}}
