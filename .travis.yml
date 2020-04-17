@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 12.10.0
+
+deploy:
+  provider: npm
+  email: 645068564@qq.com
+  api_key:
+    secure: kOsSypfjvWIIG303l7f3jTM80wWl9FlePjwTesNii9opdvf8hcGRHOSoOr2TJTqkoBIEDkL2o+iFTN8MOqSRJdH2LTpUsUXRCgh4dhnY/ZKm+FJoK5nZ5zlA5bOCqD70T19C65hDij6QYXvToyiAvNxjN8/cvDu84jMM8kgu1PWUBNJvXqeYsr0N5HdEQ+aiBD0GIEwn1F5xfPUHGUNCgiPu1fLfZBs3+5nitR8awrlmuRoZW4LdcgHDT640uxbzg9Nr35yPbwVoglqNSo0OvOLGbU/kQrpmDnIiX8vSl/bVnNyOSAsTaYB6oqEOyfMFqk1GuJmICx0Nk3rXP8mcN7pFPzWQF/uxzBYC1b5HhtFJ7HHka437k0BsjesCWLdgpPTpY324PFZw1T2hBlBoAF34dRgnLpeh1kA0qIJnGPzt0PrGzuvdtUegtv/4Nze7vSqkkV5/en3p2FPedfB4Ryyb+WypjWoU0TuQhopOPiKZnGKg6McQpm01WT2y8vN/7BzcsdRdEHrArUBMurRPYXQ1UXYBJ4sRJksTYpb96GHUH3KVEFry/OxG3mbvgKRYp0yd5eIW1KKCKCcIOvcqqTY0NYFLJ8vw7Mp6VzJ2qLp8cHKCJ5l9bTg+Gg7NuvrzAqXJPTKW/PHuBUwZPEp83hlj/VRK6z6NeFpq/mVrH0g=
+  on:
+    tags: true
+    repo: Heyff12/vuepress-theme-yaya
