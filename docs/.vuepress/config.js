@@ -4,6 +4,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
+    base:'/',
     theme: require.resolve('../../'),
     themeConfig: {
         logo: '/logo.png',
