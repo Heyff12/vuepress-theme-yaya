@@ -8,7 +8,7 @@ export default ({
 
   Vue.mixin({
     methods: {
-      setCustomPathPrefix:(url)=>{
+      setCustomPathPrefix(url){
         const base = siteData.base
         console.log(base)
         if(base && base!=='/'){
