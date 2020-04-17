@@ -4,14 +4,14 @@
             <section class="headerBody">
                 <section class="logo">
                     <router-link :to="$localePath">
-                        <img :src="$withBase($site.themeConfig.logo)" alt="Yaya's blog" />
+                        <img :src="setCustomPathPrefix($site.themeConfig.logo)" alt="Yaya's blog" />
                     </router-link>
                 </section>
                 <section class="menu">
                     <section  :class="['linkItem',{'active':currentNav.indexOf(item.link)>-1}]"  v-for="(item,index) in navLinkList" :key="index">
-                        <router-link :to="item.link">
+                        <a :href="setCustomPathPrefix(item.link)">
                             {{item.text}}
-                        </router-link>
+                        </a>
                         <div class="hiddenText">
                             {{item.english}}
                         </div>

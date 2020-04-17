@@ -1,4 +1,3 @@
-import themeCustomConfig from '@theme/utils/themeCustomConfig'
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -7,8 +6,17 @@ export default ({
   siteData // site metadata
 }) => {
 
-  siteData = {...siteData,...themeCustomConfig}
-  // console.log(Object.assign(siteData, themeCustomConfig))
-  console.log(siteData)
+  Vue.mixin({
+    methods: {
+      setCustomPathPrefix:(url)=>{
+        const base = siteData.base
+        console.log(base)
+        if(base && base!=='/'){
+          return base + url.substr(1)
+        }
+        return url  
+      }
+    }
+  })
   
 }
