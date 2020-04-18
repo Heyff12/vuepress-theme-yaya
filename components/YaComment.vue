@@ -1,13 +1,14 @@
 <template>
+  <!-- <section id="valine-vuepress-comment"></section> -->
   <Comment />
 </template>
 
 <script>
-import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+// import Comment from 'vuepress-plugin-comment'
 export default {
     name:'YaComment',
-  components: {
-    Comment
-  }
+    created () {
+      // console.log(Comment())
+    }
 }
 </script>

@@ -77,7 +77,7 @@ export default {
       },
       handleScroll(e){
         const top = e.path[1].scrollY
-        if(top + windowHeight>=this.commentDomTop - 30){
+        if(top + windowHeight>=this.commentDomTop){
           this.isNavFixed = false
         }else {
           this.isNavFixed = true
@@ -96,6 +96,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 30px;
   .title {
     font-size: 30px;
     text-align: center;
@@ -133,7 +134,9 @@ export default {
   .postDetailNav{
     position: relative;
     width: 250px;
-    margin:0 -40px 30px 40px;
+    margin:0 -40px 0 20px;
+    border-left:1px dashed @borderColor;
+    padding-left: 20px;
     .pageMenu{
       width:100%;
       position: fixed;

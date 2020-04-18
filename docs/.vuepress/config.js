@@ -52,24 +52,6 @@ module.exports = {
         ['@vuepress/search', {
             searchMaxSuggestions: 6
         }],
-        // [
-        //     'vuepress-plugin-comment',
-        //     {
-        //       choosen: 'valine', 
-        //       // options选项中的所有参数，会传给Valine的配置
-        //       options: {
-        //         el: '#valine-vuepress-comment',
-        //         appId: 'Your own appId',
-        //         appKey: 'Your own appKey',
-        //         path: '<%- page.path %>',
-        //         avatar:'robohash',
-        //         pageSizi:15,
-        //         visitor: true,
-        //         recordIP: true,
-        //         lang:'zh-CN',
-        //       }
-        //     }
-        // ],
         [
             '@vuepress/blog',
             {
@@ -136,6 +118,25 @@ module.exports = {
                     },
                 ],
             },
+        ],
+        [
+            'vuepress-plugin-comment',
+            {
+              choosen: 'valine', 
+              // options选项中的所有参数，会传给Valine的配置
+              options: {
+                el: '#valine-vuepress-comment',
+                appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
+                appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
+                path: '<%- page.path %>',
+                avatar:'robohash',
+                pageSizi:15,
+                visitor: true,
+                recordIP: true,
+                lang:'zh-CN',
+              },
+            //   container: ''
+            }
         ],
     ]
 }
