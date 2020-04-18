@@ -14,6 +14,7 @@ module.exports = {
         bookListBg: '/book.jpg',
         nextLinks: true,
         prevLinks: true,
+        smoothScroll:true,
         nav: [
             { text: '学习', link: '/study/', english: 'Study' },
             { text: '作品', link: '/works/', english: 'Works' },
