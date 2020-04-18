@@ -29,10 +29,6 @@ module.exports = {
                 { text: 'Github', link: 'https://github.com/Heyff12/vuepress-blog-yaya' },
                 { text: '标签', link: '/tags' },
             ],
-        },
-        valine: {
-            appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
-            appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
         }
     },
 }

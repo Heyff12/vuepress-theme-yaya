@@ -11,7 +11,7 @@
         <h3 class="title">{{$page.title}}</h3>
         <section class="note" >
           <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
-          <span :id="$page.path" :data-flag-title="$page.title" class="leancloud_visitors noteItem" >
+          <span :id="$page.path" :data-flag-title="$page.title" class="leancloud_visitors noteItem" v-if="$site.themeConfig.valine">
               <i class="iconfont iconbook "></i>
               <i class="leancloud-visitors-count normal">loading</i>
           </span>
@@ -99,7 +99,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   .title {
     font-size: 30px;
     text-align: center;

@@ -6,9 +6,10 @@
 export default {
     name:'YaComment',
     mounted() {
-        // window.AV = require('leancloud-storage')
-        window.Valine = require('valine')
-        this.initValine()
+        if(this.$site.themeConfig.valine){
+            window.Valine = require('valine')
+            this.initValine()
+        }
     },
     methods: {
         initValine() {
