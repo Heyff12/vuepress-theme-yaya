@@ -9,9 +9,12 @@
     <section class="postDetail">
       <section class="postDetailBody">
         <h3 class="title">{{$page.title}}</h3>
-        <section class="note cleancloud_visitors" :id="$page.path" :data-flag-title="$page.title">
+        <section class="note" >
           <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
-          <span class="noteItem"><i class="iconfont iconbook "></i><i class="normal leancloud-visitors-count">loading</i></span>
+          <span :id="$page.path" :data-flag-title="$page.title" class="leancloud_visitors noteItem" >
+              <i class="iconfont iconbook "></i>
+              <i class="leancloud-visitors-count normal">loading</i>
+          </span>
           <div class="tags">
             <router-link v-for="tag in $frontmatter.tags" :to="`/tags/${tag}`" :key="tag">
               <i class="iconfont icontag"></i>{{tag}}
