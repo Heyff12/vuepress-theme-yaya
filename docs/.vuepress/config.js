@@ -35,28 +35,4 @@ module.exports = {
             appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
         }
     },
-    markdown: {
-        lineNumbers: true,
-        extractHeaders: [ 'h1','h2', 'h3', 'h4' ]
-    },
-    plugins: [
-        // [
-        //     'vuepress-plugin-comment',
-        //     {
-        //       choosen: 'valine', 
-        //       // options选项中的所有参数，会传给Valine的配置
-        //       options: {
-        //         el: '#valine-vuepress-comment',
-        //         appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
-        //         appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
-        //         path: '<%- page.path %>',
-        //         avatar:'robohash',
-        //         pageSizi:15,
-        //         visitor: true,
-        //         recordIP: true,
-        //         lang:'zh-CN',
-        //       },
-        //     }
-        // ],
-    ]
 }

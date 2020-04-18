@@ -6,7 +6,7 @@
 export default {
     name:'YaComment',
     mounted() {
-        window.AV = require('leancloud-storage')
+        // window.AV = require('leancloud-storage')
         window.Valine = require('valine')
         this.initValine()
     },
@@ -18,13 +18,13 @@ export default {
                 appKey: this.$site.themeConfig.valine.appKey,
                 visitor: true,
                 recordIP: true,
-                path: window.location.pathname,
-                // path: '<%- this.$page.path %>',
+                path: this.$page.path,
                 avatar:'robohash',
                 pageSizi:15,
                 visitor: true,
                 recordIP: true,
                 lang:'zh-CN',
+                placeholder:'见字如面~'
             })
         }
     }

@@ -1,7 +1,3 @@
-// module.exports = {
-//     extend: '@vuepress/theme-default',
-//     globalLayout: '/layouts/GlobalLayout.vue', 
-// }
 
 module.exports = (themeConfig, ctx) => {
   
@@ -86,6 +82,10 @@ module.exports = (themeConfig, ctx) => {
     const config = {
       extend: '@vuepress/theme-default',
       globalLayout: '/layouts/GlobalLayout.vue',
+      markdown: {
+          lineNumbers: true,
+          extractHeaders: [ 'h1','h2', 'h3', 'h4' ]
+      },
       plugins,
     }
   

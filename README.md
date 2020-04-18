@@ -9,7 +9,7 @@
 📥 文章按照文件夹构建大栏目分类  
 👾 搜索  
 ⛳️ 自定义导航 
-🚧 开发中：评论及阅读量支持
+🚧 评论及阅读量支持，评论使用参考[valine](https://valine.js.org/),配置valine中的appId、appKey
 
 ## 🚧 安装
 
@@ -27,86 +27,37 @@ npm i vuepress-theme-yaya
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
-    theme: 'yaya',   //主题
+    base:'/',
+    theme: 'yaya',
     themeConfig: {
-        logo: '/logo.png',  //logo
+        logo: '/logo.png',
         search: true,
-        picListBg: '/bg.jpg',  // 右图列表，默认图片
-        workListBg: '/bg.jpg',  // 横排2条图文列表，默认图片
-        bookListBg: '/book.jpg',  // 横排3条图文列表，默认图片
+        picListBg: '/bg.jpg',
+        workListBg: '/bg.jpg',
+        bookListBg: '/book.jpg',
         nextLinks: true,
         prevLinks: true,
-        //自定义导航
+        smoothScroll:true,
         nav: [
-            { text: '学习', link: '/study/', english: 'Study' },
-            { text: '作品', link: '/works/', english: 'Works' },
-            { text: '读书', link: '/reading/', english: 'Reading' },
-            { text: '随笔', link: '/writing/', english: 'Writing' },
+            { text: '学习', link: '/study/', english: 'Study' },  //文字列表
+            { text: '作品', link: '/works/', english: 'Works' },  //一排两图列表
+            { text: '读书', link: '/reading/', english: 'Reading' }, //一排三图列表
+            { text: '随笔', link: '/writing/', english: 'Writing' }, //右侧有小图片列表
             { text: '关于', link: '/about/', english: 'About' },
-        ]
-    },
-    plugins: [
-        [
-            '@vuepress/blog',
-            {
-                directories: [
-                    {
-                        // Unique ID of current classification
-                        id: 'study',
-                        // Target directory
-                        dirname: 'study',
-                        // Path of the `entry page` (or `list page`)
-                        path: '/study/',
-                        // layout: 'Layout', //默认组件Layout
-                        //   itemPermalink: '/:year/:month/:day/:slug',
-                        itemPermalink: '/:regular',
-                        pagination: {
-                            lengthPerPage: 10,
-                        },
-                    },
-                    {
-                        id: 'works',
-                        dirname: 'works',
-                        path: '/works/',
-                        itemPermalink: '/:regular',
-                        layout: 'LayoutWork',
-                        pagination: {
-                            lengthPerPage: 6,
-                        },
-                    },
-                    {
-                        id: 'reading',
-                        dirname: 'reading',
-                        path: '/reading/',
-                        itemPermalink: '/:regular',
-                        layout:'LayoutBook',
-                        pagination: {
-                            lengthPerPage: 9,
-                        },
-                    },
-                    {
-                        id: 'writing',
-                        dirname: 'writing',
-                        path: '/writing/',
-                        itemPermalink: '/:regular',
-                        layout:'LayoutPic',
-                        pagination: {
-                            lengthPerPage: 8,
-                        },
-                    },
-                ],
-                frontmatters: [
-                    {
-                        id: "tags",
-                        keys: ['tags'],
-                        path: '/tags/',
-                        layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
-                        frontmatter: { title: '分类检索文章' },
-                    }
-                ],
-            },
         ],
-    ]
+        footer: {
+            author: 'Yaya',
+            reference:'豫ICP备14017364号-1',
+            leftLinks: [
+                { text: 'Github', link: 'https://github.com/Heyff12/vuepress-blog-yaya' },
+                { text: '标签', link: '/tags' },
+            ],
+        },
+        valine: {
+            appId: '',
+            appKey: '',
+        }
+    }
 ```
 
 ## 🔧 主题修改  
