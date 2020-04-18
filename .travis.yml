@@ -3,6 +3,7 @@ node_js:
 - 12.10.0
 
 deploy:
+  edge: true
   provider: npm
   email: 645068564@qq.com
   skip_cleanup: true
