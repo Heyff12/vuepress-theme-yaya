@@ -8,9 +8,9 @@
     </template>
     <section class="postDetail">
       <h3 class="title">{{$page.title}}</h3>
-      <section class="note">
+      <section class="note cleancloud_visitors" :id="$page.path">
         <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
-        <span class="noteItem"><i class="iconfont iconbook"></i>{{$page.lastUpdated}}</span>
+        <span class="noteItem"><i class="iconfont iconbook "></i><i class="normal leancloud-visitors-count"></i></span>
         <div class="tags">
           <router-link v-for="tag in $frontmatter.tags" :to="`/tags/${tag}`" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
@@ -91,6 +91,9 @@ export default {
         margin:0 10px;
         &:nth-child(2){
           display: none;
+        }
+        i.normal{
+          font-style: normal;
         }
       }
       .tags{

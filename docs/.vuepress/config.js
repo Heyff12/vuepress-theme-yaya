@@ -59,7 +59,13 @@ module.exports = {
         //       options: {
         //         el: '#valine-vuepress-comment',
         //         appId: 'Your own appId',
-        //         appKey: 'Your own appKey'
+        //         appKey: 'Your own appKey',
+        //         path: '<%- page.path %>',
+        //         avatar:'robohash',
+        //         pageSizi:15,
+        //         visitor: true,
+        //         recordIP: true,
+        //         lang:'zh-CN',
         //       }
         //     }
         // ],

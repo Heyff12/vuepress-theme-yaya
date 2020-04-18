@@ -10,7 +10,6 @@ export default ({
     methods: {
       setCustomPathPrefix(url){
         const base = siteData.base
-        console.log(base)
         if(base && base!=='/'){
           return base + url.substr(1)
         }
