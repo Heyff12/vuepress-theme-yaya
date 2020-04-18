@@ -16,9 +16,11 @@
     "@vuepress/plugin-last-updated": "^1.4.0",
     "@vuepress/plugin-nprogress": "^1.4.0",
     "@vuepress/plugin-search": "^1.4.0",
+    "leancloud-storage": "^4.5.3",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "moment": "^2.24.0",
+    "valine": "^1.4.4",
     "vuepress": "^1.4.0",
     "vuepress-plugin-comment": "^0.7.3"
   }

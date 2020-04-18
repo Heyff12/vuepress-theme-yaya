@@ -29,114 +29,34 @@ module.exports = {
                 { text: 'Github', link: 'https://github.com/Heyff12/vuepress-blog-yaya' },
                 { text: '标签', link: '/tags' },
             ],
+        },
+        valine: {
+            appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
+            appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
         }
     },
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
+        extractHeaders: [ 'h1','h2', 'h3', 'h4' ]
     },
     plugins: [
-        '@vuepress/back-to-top',
-        [
-            '@vuepress/last-updated',
-            {
-              transformer: (timestamp, lang) => {
-                // 不要忘了安装 moment
-                const moment = require('moment')
-                moment.locale(lang)
-                return moment().format('YYYY-MM-D')
-                return moment(timestamp).fromNow()
-              }
-            }
-        ],
-        '@vuepress/plugin-nprogress',
-        ['@vuepress/search', {
-            searchMaxSuggestions: 6
-        }],
-        [
-            '@vuepress/blog',
-            {
-                directories: [
-                    {
-                        // Unique ID of current classification
-                        id: 'study',
-                        // Target directory
-                        dirname: 'study',
-                        // Path of the `entry page` (or `list page`)
-                        path: '/study/',
-                        // layout: 'Layout',
-                        //   itemPermalink: '/:year/:month/:day/:slug',
-                        itemPermalink: '/:regular',
-                        pagination: {
-                            lengthPerPage: 10,
-                        },
-                    },
-                    {
-                        id: 'works',
-                        dirname: 'works',
-                        path: '/works/',
-                        itemPermalink: '/:regular',
-                        layout: 'LayoutWork',
-                        pagination: {
-                            lengthPerPage: 6,
-                        },
-                    },
-                    {
-                        id: 'reading',
-                        dirname: 'reading',
-                        path: '/reading/',
-                        itemPermalink: '/:regular',
-                        layout:'LayoutBook',
-                        pagination: {
-                            lengthPerPage: 9,
-                        },
-                    },
-                    {
-                        id: 'writing',
-                        dirname: 'writing',
-                        path: '/writing/',
-                        itemPermalink: '/:regular',
-                        layout:'LayoutPic',
-                        pagination: {
-                            lengthPerPage: 8,
-                        },
-                    },
-                ],
-                frontmatters: [
-                    {
-                        id: "tags",
-                        keys: ['tags'],
-                        path: '/tags/',
-                        layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
-                        frontmatter: { title: '分类检索文章' },
-                        // itemlayout: 'Layout',
-                    }, {
-                        id: "categories",         // 再 Vue 实例中的名称
-                        keys: ['categories'],
-                        path: '/categories/',
-                        layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
-                        frontmatter: { title: '分类检索文章' },
-                    },
-                ],
-            },
-        ],
-        [
-            'vuepress-plugin-comment',
-            {
-              choosen: 'valine', 
-              // options选项中的所有参数，会传给Valine的配置
-              options: {
-                el: '#valine-vuepress-comment',
-                appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
-                appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
-                path: '<%- page.path %>',
-                avatar:'robohash',
-                pageSizi:15,
-                visitor: true,
-                recordIP: true,
-                lang:'zh-CN',
-              },
-            //   container: ''
-            }
-        ],
+        // [
+        //     'vuepress-plugin-comment',
+        //     {
+        //       choosen: 'valine', 
+        //       // options选项中的所有参数，会传给Valine的配置
+        //       options: {
+        //         el: '#valine-vuepress-comment',
+        //         appId: 'OHPzKSvAHh9kiuiJ1364y4QV-gzGzoHsz',
+        //         appKey: 'D1wtp2PmL2rmewVPEstmjlEB',
+        //         path: '<%- page.path %>',
+        //         avatar:'robohash',
+        //         pageSizi:15,
+        //         visitor: true,
+        //         recordIP: true,
+        //         lang:'zh-CN',
+        //       },
+        //     }
+        // ],
     ]
 }
