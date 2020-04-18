@@ -6,7 +6,6 @@ deploy:
   email: 645068564@qq.com
   skip_cleanup: true
   api_key: $NPM_TOKEN
-    # secure: MITv1OzoOczO+uh23OSfqW05rn6dNMr/cQ0nhBr9xm0+CNYeqzcehN0nYFAEw4YQABIeHxSU+ZZsvx2wWrHoDKjItc10VVM+m84pcYHfV8/ERkI11cTv9Csl7arqnNrQGjb0paATatGNtU/qRaAvu/uxFC5L1nEwMOBMZ4Q0rQAIXoaK0wnsXd1nlOPkVzR0yxj9waRGc4llajCS0XnJeaY/k3LEZ40sBN1QV9fn2Va4xyCOp0LXemmkm5yIU0PhJTckkKLifmcH7+G+d2IWWBNtTaE6NkOo6T6lpSKIsJNiV8b/s7kbgyJLelp13KVg1eu7X+k74QGb9ZuGN1TUeFpqPQYoYHpKTw/mBG+5Xb+8U2qSUUiWXlVWwu0Bz4nbv2VRgpGIIeyAk1s61dvJmP87Np5uoum0Y7l+w4P5Ax0ew8raMja3Pw4LZKdBTe76np51IOTq47OEsJNDl11Xgy2InVS0I58Svz193BYeML1anwNz3JkBy9OosSiPaeSnbEqx1q3wU0wlhqYZgZ0BtU5yFzybbwEOG+6v3EUkO04wAm8GH45HiZ40oxkgzXNyoVDhZfOfAlRM4qlEzWkbhGYykSiI2SJjBc2KITlVjrsj4DoyUqlcxxQxUR2QN5MPy5SrWSM/zR59L10ey280Hb7BdXdaaCb+V9sXvHtpd+c=
   on:
     # branch: master
     tags: true
