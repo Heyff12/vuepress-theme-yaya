@@ -22,7 +22,7 @@
           <Content/>
         </section>
       </section>
-      <section class="postDetailNav">
+      <section class="postDetailNav" v-show="isShowNav">
         <section :class="['pageMenu',{'noFixed':!isNavFixed}]">
           <ul>
             <li v-for="(menu,index) in $page.headers" :key="index" :class="setNavClass(menu.level)">
@@ -55,13 +55,18 @@ export default {
       return {
         firstHeadersLevel: 1,
         commentDomTop: 0,
-        isNavFixed: true
+        isNavFixed: true,
+        isShowNav: false
       }
     },
     mounted () {
       console.log(this.$page)
       console.log(this.$frontmatter)
-      this.firstHeadersLevel = this.$page.headers[0].level
+      const {headers} = this.$page
+      if(headers && headers.length>4){
+        this.isShowNav = true
+        this.firstHeadersLevel = this.$page.headers[0].level
+      }
       window.addEventListener('scroll', this.handleScroll);
       const commentDom = this.$refs.comment
       this.commentDomTop = commentDom.offsetTop
