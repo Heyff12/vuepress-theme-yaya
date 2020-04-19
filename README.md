@@ -1,8 +1,9 @@
 # Yaya
 
 > 一款由纯色线条组成的简约 Vuepsress 博客主题  🎊    
-[参考链接-github pages](https://heyff12.github.io/vuepress-theme-yaya/) 
-[参考链接-real case](http://vuepressyaya.yaya12.com/)
+* [参考链接-githubPages](https://heyff12.github.io/vuepress-theme-yaya/)  
+* [参考链接-real case](http://vuepressyaya.yaya12.com/)  
+
 
 ## 🏁 特性
 🌈 多变的颜色，每次刷新随机颜色  
