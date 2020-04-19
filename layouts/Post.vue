@@ -47,7 +47,6 @@
 import YaPageHeader from '@theme/components/YaPageHeader'
 import YaLineContainer from '@theme/components/YaLineContainer'
 import YaComment from '@theme/components/YaComment'
-const windowHeight = window.innerHeight
 
 export default {
     name:'Post',
@@ -59,7 +58,8 @@ export default {
         firstHeadersLevel: 1,
         commentDomTop: 0,
         isNavFixed: true,
-        isShowNav: false
+        isShowNav: false,
+        windowHeight: 0
       }
     },
     mounted () {
@@ -71,8 +71,9 @@ export default {
         this.firstHeadersLevel = this.$page.headers[0].level
       }
       window.addEventListener('scroll', this.handleScroll);
-      const commentDom = this.$refs.comment
-      this.commentDomTop = commentDom.offsetTop
+        const commentDom = this.$refs.comment
+        this.commentDomTop = commentDom.offsetTop
+        this.windowHeight = window.innerHeight
     },
     methods: {
       setNavClass(level){
@@ -80,7 +81,7 @@ export default {
       },
       handleScroll(e){
         const top = e.path[1].scrollY
-        if(top + windowHeight>=this.commentDomTop){
+        if(top + this.windowHeight>=this.commentDomTop){
           this.isNavFixed = false
         }else {
           this.isNavFixed = true

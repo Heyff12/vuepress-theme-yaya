@@ -3,11 +3,11 @@
 </template>
 
 <script>
-const Valine = require('valine')
 export default {
     name:'YaComment',
     mounted() {
         if(this.$site.themeConfig.valine){
+            window.Valine = require('valine')
             this.initValine()
         }
     },
