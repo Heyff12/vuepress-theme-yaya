@@ -6,7 +6,6 @@ install:
 script:
 - npm run build
 deploy:
-  # edge: true
   - provider: npm
     email: 645068564@qq.com
     skip_cleanup: true
