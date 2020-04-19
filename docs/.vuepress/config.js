@@ -4,7 +4,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
     ],
-    base:'/',
+    base:'/vuepress-theme-yaya/',
     theme: require.resolve('../../'),
     themeConfig: {
         logo: '/logo.png',
