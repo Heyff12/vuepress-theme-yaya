@@ -142,7 +142,7 @@ export default {
     border-left:1px dashed @borderColor;
     padding-left: 20px;
     .pageMenu{
-      width:100%;
+      width:250px;
       position: fixed;
       margin-top: 0;
       font-size: 16px;
@@ -169,6 +169,9 @@ export default {
         &.nav4{
           font-size: 12px;
           line-height: 20px;
+        }
+        a{
+          font-weight: normal;
         }
       }
     }
