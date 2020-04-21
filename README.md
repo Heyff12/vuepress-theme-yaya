@@ -1,5 +1,7 @@
 # Yaya
 
+[![Build Status](https://travis-ci.org/Heyff12/vuepress-theme-yaya.svg?branch=master)](https://travis-ci.org/Heyff12/vuepress-theme-yaya) 
+
 > 一款由纯色线条组成的简约 Vuepsress 博客主题  🎊    
 * [参考链接-githubPages](https://heyff12.github.io/vuepress-theme-yaya/)  
 * [参考链接-real case](http://vuepressyaya.yaya12.com/)  
