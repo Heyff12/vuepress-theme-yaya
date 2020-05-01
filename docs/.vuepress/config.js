@@ -8,6 +8,8 @@ module.exports = {
     theme: require.resolve('../../'),
     themeConfig: {
         logo: '/logo.png',
+        author: 'Yaya',
+        homePageEnterUrl: '/study/',
         search: true,
         picListBg: '/bg.jpg',
         workListBg: '/bg.jpg',

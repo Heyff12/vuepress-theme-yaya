@@ -1,0 +1,415 @@
+@import './variables';
+
+@flowerColor: tomato;
+@flowerColor2: #e6042b;
+@flowerColor3: pink;
+@flowerColor4: #d002d0;
+@flowerColor5: #ff4782;
+@leafColor: green;
+
+#homePage{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  // background-color: #27e6a6;
+  // background-image: linear-gradient(-60deg, #95e6f9, #5eb7f7);
+  .sun{
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 0;
+    top:200px;
+    right:10px;
+    display: flex;
+    align-items: center;
+    animation: sunPath 8s ease-in infinite;
+    justify-content: center;
+  }
+  .enter{
+      width:200px;
+      height: 200px;
+      position: fixed;
+      z-index: 200;
+      top:0;
+      left: 50%;
+      margin-left: -100px;
+      cursor: pointer;
+      .heart{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        // transform:rotate(45deg);
+        top:80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: beat .6s linear infinite;
+        &::before{
+            position: absolute;
+            left: -75px;
+            content: "";
+            width: 80px;
+            height: 100px;
+            background: red;
+            border-radius: 50px 0 0 50px;
+        }
+        &::after{
+            position: absolute;
+            left: 10px;
+            top:-85px;
+            content: "";
+            width: 80px;
+            height: 100px;
+            background: red;
+            border-radius:0 50px 50px 0;
+            transform:rotate(-90deg);
+        }
+        h3{
+            transform:rotate(-45deg);
+            color: white;
+            margin-top:-20px;
+            letter-spacing: 3px;
+        }
+      }
+  }
+
+  .circleHalf{
+    width:75px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top:5px;
+    left:72.5px;
+    &:after{
+      content: '';
+      position: absolute;
+      width:100%;
+      height: 80px;
+      border-radius: 100% 100% 0 0;
+      background-color: @flowerColor;
+    }
+    &:nth-child(1){
+      left:160px;
+      top:12px;
+      transform:rotate(56deg);
+      transform-origin: left;
+    }
+    &:nth-child(2){
+      left:196px;
+      top:80px;
+      transform:rotate(105deg);
+      transform-origin: left;
+    }
+    &:nth-child(3){
+      left:165px;
+      top:158px;
+      transform:rotate(165deg);
+      transform-origin: left;
+    }
+    &:nth-child(4){
+      left:90px;
+      top:175px;
+      transform:rotate(215deg);
+      transform-origin: left;
+    }
+    &:nth-child(5){
+      left:25px;
+      top:125px;
+      transform:rotate(275deg);
+      transform-origin: left;
+    }
+    &:nth-child(6){
+      left:25px;
+      top:46px;
+      transform:rotate(325deg);
+      transform-origin: left;
+    }
+  }
+  .flower{
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    .circleOut{
+      width:150px;
+      height: 150px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: @flowerColor;
+      .circle{
+        width:120px;
+        height: 120px;
+        border-radius: 100%;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-size: 24px;
+            font-weight: normal;
+            color:@flowerColor;
+        }
+      }
+      // .arrow{
+      //   width:0;
+      //   height: 0;
+      //   border-width:45px 20px;
+      //   border-style: solid;
+      //   border-color: @flowerColor transparent transparent transparent;
+      // }
+    }
+    &.small{
+      transform:scale(.6);
+    }
+  }
+  .sunFlower{
+    width:320px;
+    height: 520px;
+    position: absolute;
+    bottom: 0;
+    right:50px;
+    z-index: 100;
+    animation: swing 3.2s ease-out infinite alternate;
+    display: block;
+    .stem{
+      width:100px;
+      height: 400px;
+      position: relative;
+      z-index: 1;
+      border-radius: 100%;
+      border:10px solid @leafColor;
+      border-color: @leafColor @leafColor transparent transparent;
+      margin:-60px 0 0 30px;
+      .leaf{
+        width:60px;
+        height: 260px;
+        border-radius: 0 100% 0 100%;
+        background-color: @leafColor;
+        position: absolute;
+        bottom: 0;
+        left:10px;
+        transform: rotate(-10deg);
+        transform-origin: right;
+        &:nth-child(2){
+          transform:rotate(20deg) scale(-1,1);
+          width:80px;
+          height: 320px;
+          left:50px;
+        }
+      }
+    }   
+  }
+  .flowerGroup{
+    width:100%;
+    height: 600px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    .sunFlower{
+      &:nth-child(2){
+        right:350px;
+        .flower{
+            .circleOut{
+                background-color: @flowerColor2;
+            }
+            .circleHalf{
+                &:after{
+                    background-color: @flowerColor2;
+                }
+            }
+        }
+      }
+      &:nth-child(3){
+        right:650px;
+        .flower{
+            .circleOut{
+                background-color: @flowerColor3;
+            }
+            .circleHalf{
+                &:after{
+                    background-color: @flowerColor3;
+                }
+            }
+        }
+      }
+      &:nth-child(4){
+        right:950px;
+        .flower{
+            .circleOut{
+                background-color: @flowerColor4;
+            }
+            .circleHalf{
+                &:after{
+                    background-color: @flowerColor4;
+                }
+            }
+        }
+      }
+      &:nth-child(5){
+        right:1250px;
+        .flower{
+            .circleOut{
+                background-color: @flowerColor5;
+            }
+            .circleHalf{
+                &:after{
+                    background-color: @flowerColor5;
+                }
+            }
+        }
+      }
+      &:nth-child(6){
+        right:1550px;
+      }
+    }
+    &.second{
+        z-index: 9;
+        left:140px;
+        bottom:-80px;
+        .sunFlower{
+            animation: swingSmall 3.2s ease-out infinite alternate;
+        }
+    }
+  }
+  .starGroup{
+    width:100%;
+    height: 600px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+    display: none;
+    // display: flex;
+    // flex-wrap: wrap;
+    .flower{
+        transform: scale(.1);
+        top:-100px;
+        left:-60px;
+        position: absolute;
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+        &:nth-child(3){
+            top:-120px;
+            left:50px;
+        }
+        &:nth-child(4){
+            top:-130px;
+            left:220px;
+        }
+        &:nth-child(5){
+            top:-60px;
+            left:180px;
+        }
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+        &:nth-child(2){
+            top:-30px;
+            left:0;
+        }
+    }
+  }
+
+  .grassGround{
+    width:120%;
+    height: 800px;
+    background-image: linear-gradient(-60deg, greenyellow, #0e4c38);
+    // background-color: #0e4c38;
+    position: fixed;
+    bottom: -235px;
+    left:-15%;
+    z-index: 7;
+    transform:rotate(8deg);
+    transform-origin: center;
+  }
+}
+@keyframes swing {
+  from{
+    transform:rotate(5deg);
+  }
+  to{
+    transform:rotate(-3deg);
+  }
+}
+@keyframes swingSmall {
+  from{
+    transform:rotate(5deg) scale(.8);
+  }
+  to{
+    transform:rotate(-3deg) scale(.8);
+  }
+}
+@keyframes beat {
+  from{
+    transform:scale(.85) rotate(45deg);
+  }
+  to{
+    transform:scale(1) rotate(45deg);
+  }
+}
+@keyframes sunPath {
+  0%{
+      top:200px;
+      right:10px;
+      transform:scale(1);
+  }
+  15%{
+      top:80px;
+      right:15%;
+      transform:scale(.9);
+  }
+  40%{
+      top:10px;
+      right:20%;
+      transform:scale(.8);
+  }
+  50%{
+      top:-50px;
+      right:30%;
+      transform:scale(.7);
+  }
+  60%{
+      top:10px;
+      right:70%;
+      transform:scale(.6);
+  }
+  70%{
+      top:100px;
+      right:80%;
+      transform:scale(.5);
+  }
+  80%{
+      top:100px;
+      right:90%;
+      transform:scale(.5);
+  }
+  100%{
+        top:300px;
+      right:100%;
+      transform:scale(.5);
+  }
+}

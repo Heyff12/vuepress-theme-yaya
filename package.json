@@ -20,6 +20,7 @@
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "moment": "^2.24.0",
+    "postcss-loader": "^3.0.0",
     "valine": "^1.4.4",
     "vuepress": "^1.4.0"
   }
