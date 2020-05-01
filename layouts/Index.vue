@@ -302,7 +302,7 @@
 <script>
 
 export default {
-  name: 'Index',
+  name:'Index',
   components: {
   },
   data(){

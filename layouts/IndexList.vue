@@ -21,7 +21,7 @@ import YaLineContainer from '@theme/components/YaLineContainer'
 import YaPicContainer from '@theme/components/YaPicContainer.vue'
 
 export default {
-  name: 'Index',
+  name: 'IndexList',
   components: {
     YaLineContainer,YaPageHeader,YaPicContainer
   },
