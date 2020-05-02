@@ -35,7 +35,7 @@
           <div class="circleHalf"></div>
           <div class="circleOut">
             <div class="circle">
-              <span>Garden</span>
+              <span>Welcome</span>
             </div>
           </div>
         </section>
@@ -56,7 +56,7 @@
           <div class="circleHalf"></div>
           <div class="circleOut">
             <div class="circle">
-              <span>Private</span>
+              <span>To</span>
             </div>
           </div>
         </section>
@@ -98,7 +98,7 @@
           <div class="circleHalf"></div>
           <div class="circleOut">
             <div class="circle">
-              <span>to</span>
+              <span>Private</span>
             </div>
           </div>
         </section>
@@ -119,7 +119,7 @@
           <div class="circleHalf"></div>
           <div class="circleOut">
             <div class="circle">
-              <span>Welcome</span>
+              <span>Garden</span>
             </div>
           </div>
         </section>

@@ -3,8 +3,9 @@
 @flowerColor: tomato;
 @flowerColor2: #e6042b;
 @flowerColor3: pink;
-@flowerColor4: #d002d0;
+@flowerColor4: #eb05cc;
 @flowerColor5: #ff4782;
+@flowerColor6: #07D6AA;
 @leafColor: green;
 
 #homePage{
@@ -173,10 +174,8 @@
   .sunFlower{
     width:320px;
     height: 520px;
-    position: absolute;
-    bottom: 0;
-    right:50px;
     z-index: 100;
+    transform-origin: bottom;
     animation: swing 3.2s ease-out infinite alternate;
     display: block;
     .stem{
@@ -214,9 +213,12 @@
     bottom: 0;
     left: 0;
     z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
     .sunFlower{
       &:nth-child(2){
-        right:350px;
         .flower{
             .circleOut{
                 background-color: @flowerColor2;
@@ -229,7 +231,6 @@
         }
       }
       &:nth-child(3){
-        right:650px;
         .flower{
             .circleOut{
                 background-color: @flowerColor3;
@@ -242,7 +243,6 @@
         }
       }
       &:nth-child(4){
-        right:950px;
         .flower{
             .circleOut{
                 background-color: @flowerColor4;
@@ -255,7 +255,6 @@
         }
       }
       &:nth-child(5){
-        right:1250px;
         .flower{
             .circleOut{
                 background-color: @flowerColor5;
@@ -268,13 +267,23 @@
         }
       }
       &:nth-child(6){
-        right:1550px;
+        .flower{
+            .circleOut{
+                background-color: @flowerColor6;
+            }
+            .circleHalf{
+                &:after{
+                    background-color: @flowerColor6;
+                }
+            }
+        }
       }
     }
     &.second{
         z-index: 9;
-        left:140px;
+        left:-80px;
         bottom:-80px;
+        flex-direction: row-reverse;
         .sunFlower{
             animation: swingSmall 3.2s ease-out infinite alternate;
         }
