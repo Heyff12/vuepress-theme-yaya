@@ -98,7 +98,7 @@
           <div class="circleHalf"></div>
           <div class="circleOut">
             <div class="circle">
-              <span>Private</span>
+              <span>Personal</span>
             </div>
           </div>
         </section>
