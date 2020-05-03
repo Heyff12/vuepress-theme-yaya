@@ -134,6 +134,7 @@ export default {
   }
   .postDetailBody{
     flex:1;
+    overflow-x: auto;
   }
   .postDetailNav{
     position: relative;
