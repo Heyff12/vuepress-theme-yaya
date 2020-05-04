@@ -20,60 +20,64 @@
     overflow: hidden;
     position: fixed;
     z-index: 0;
-    top:200px;
+    top:0px;
     right:10px;
     display: flex;
     align-items: center;
-    animation: sunPath 8s ease-in infinite;
+    // top:200px;
+    // right:10px;
+    // animation: sunPath 8s ease-in infinite;
     justify-content: center;
-  }
-  .enter{
-      width:200px;
-      height: 200px;
-      position: fixed;
+    .enter{
+      width:100px;
+      height: 80px;
+      position: absolute;
       z-index: 200;
-      top:0;
+      top:50%;
       left: 50%;
-      margin-left: -100px;
+      margin-left: -45px;
+      margin-top: -40px;
       cursor: pointer;
-      .heart{
-        position: relative;
-        width: 100px;
+    }
+  }
+  .heart{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    top:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: beat .6s linear infinite;
+    &::before{
+        position: absolute;
+        left: -75px;
+        content: "";
+        width: 80px;
         height: 100px;
-        background-color: red;
-        // transform:rotate(45deg);
-        top:80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: beat .6s linear infinite;
-        &::before{
-            position: absolute;
-            left: -75px;
-            content: "";
-            width: 80px;
-            height: 100px;
-            background: red;
-            border-radius: 50px 0 0 50px;
-        }
-        &::after{
-            position: absolute;
-            left: 10px;
-            top:-85px;
-            content: "";
-            width: 80px;
-            height: 100px;
-            background: red;
-            border-radius:0 50px 50px 0;
-            transform:rotate(-90deg);
-        }
-        h3{
-            transform:rotate(-45deg);
-            color: white;
-            margin-top:-20px;
-            letter-spacing: 3px;
-        }
-      }
+        background: red;
+        border-radius: 50px 0 0 50px;
+    }
+    &::after{
+        position: absolute;
+        left: 10px;
+        top:-85px;
+        content: "";
+        width: 80px;
+        height: 100px;
+        background: red;
+        border-radius:0 50px 50px 0;
+        transform:rotate(-90deg);
+    }
+    h3{
+        transform:rotate(-45deg);
+        color: white;
+        z-index: 10;
+        margin: -75px 0 0 -60px;
+        letter-spacing: 3px;
+        font-size: 50px;
+    }
   }
 
   .circleHalf{
@@ -374,10 +378,10 @@
 }
 @keyframes beat {
   from{
-    transform:scale(.85) rotate(45deg);
+    transform:scale(.4) rotate(45deg);
   }
   to{
-    transform:scale(1) rotate(45deg);
+    transform:scale(.45) rotate(45deg);
   }
 }
 @keyframes sunPath {

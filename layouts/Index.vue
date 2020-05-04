@@ -12,13 +12,13 @@
           <ellipse ry="45" rx="53" id="svg_5" cy="108.5" cx="114.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="none" fill="yellow"/>
         </g>
       </svg>
-    </section>
-    <section class="enter">
-      <a :href="$withBase(this.$site.themeConfig.homePageEnterUrl)">
-        <section class="heart">
-          <h3>ENTER</h3>
-        </section>
-      </a>
+      <section class="enter">
+        <a :href="$withBase(this.$site.themeConfig.homePageEnterUrl)">
+          <section class="heart">
+            <h3>ENTER</h3>
+          </section>
+        </a>
+      </section>
     </section>
 
     <section class="grassGround">
