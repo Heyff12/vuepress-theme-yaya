@@ -111,13 +111,15 @@ export default {
     width:100%;
     border-top: 1px dashed @borderColor;
     border-bottom: 1px dashed @borderColor;
-    height: 40px;
-    line-height: 40px;
+    min-height: 40px;
+    padding: 5px 0;
+    line-height: 30px;
     margin: 15px auto 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     i{
       padding-right: 5px;
     }
@@ -205,7 +207,7 @@ export default {
         }
       }
       .tags{
-        display:none;
+        // display:none;
       }
     }
   }

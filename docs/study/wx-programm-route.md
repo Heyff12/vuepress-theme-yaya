@@ -3,6 +3,12 @@ title: '小程序路由normalhe'
 tags: 
   - haha
   - hehe
+  - CI/CD
+  - travis
+  - github actons
+  - docker
+  - ssh免密登录
+  - 初学者
 category: 
   - vue
   - vuepress

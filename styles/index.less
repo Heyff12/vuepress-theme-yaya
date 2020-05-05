@@ -28,6 +28,9 @@
     // right:10px;
     // animation: sunPath 8s ease-in infinite;
     justify-content: center;
+    .sunSvg{
+      animation: sunCircle 5s ease-in infinite;
+    }
     .enter{
       width:100px;
       height: 80px;
@@ -382,6 +385,14 @@
   }
   to{
     transform:scale(.45) rotate(45deg);
+  }
+}
+@keyframes sunCircle {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(-360deg);
   }
 }
 @keyframes sunPath {
