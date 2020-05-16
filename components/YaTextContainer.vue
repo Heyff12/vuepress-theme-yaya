@@ -9,7 +9,7 @@
         <router-link :to="page.path">{{page.frontmatter.summary}}</router-link>             
       </p>
       <footer>
-        <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
+        <span class="date"><i class="iconfont iconriqi"></i>{{page.frontmatter.date || page.lastUpdated}}</span>
         <div class="tags">
           <router-link v-for="tag in page.frontmatter.tags" :to="`/tags/${tag}`" :key="tag">
             <i class="iconfont icontag"></i>{{tag}}
@@ -26,10 +26,11 @@ export default {
     // mounted(){
     //     console.log(this.$page)
     //     console.log(this.$frontmatter)
-    //     console.log(this.$frontmatterKey)
-    //     // console.log(this.$frontmatterKey.list)
-    //     console.log(this.$pagination)
-    //     console.log(this.$pagination && this.$pagination.pages)
+    //     console.log(this.page)
+    //     // console.log(this.$frontmatterKey)
+    //     // // console.log(this.$frontmatterKey.list)
+    //     // console.log(this.$pagination)
+    //     // console.log(this.$pagination && this.$pagination.pages)
     // }
 }
 </script>

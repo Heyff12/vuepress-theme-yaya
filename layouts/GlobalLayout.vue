@@ -1,6 +1,6 @@
 <template>
   <div id="globalLayout">
-    <template v-if="isIndex">
+    <template v-if="showHeader">
       <component :is="layout"/>
     </template>
     <template v-else>
@@ -32,13 +32,18 @@ export default {
           if (this.$page.path) {
             const layoutValue = this.$frontmatter.layout
             if (layoutValue) {
-              this.isIndex = layoutValue==='Index'
+              // this.isIndex = layoutValue==='Index'
              // 你也可以像默认的 globalLayout 一样首先检测 layout 是否存在
               return layoutValue
             }
             return 'Layout'
           }
           return 'NotFound'
+        },
+        showHeader () {
+          const currentPath = this.$page.path
+          const noHeaderPages = ['/']
+          return noHeaderPages.includes(currentPath)
         }
     }
 }

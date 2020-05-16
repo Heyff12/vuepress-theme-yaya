@@ -14,7 +14,7 @@
                 <router-link :to="page.path">{{ page.title }}</router-link>
               </h4>
               <footer>
-                <span class="date"><i class="iconfont iconriqi"></i>{{page.lastUpdated}}</span>
+                <span class="date"><i class="iconfont iconriqi"></i>{{page.frontmatter.date || page.lastUpdated}}</span>
               </footer>
               <p class="book">
                 <i class="iconfont iconbook"></i>{{page.frontmatter.bookName}}

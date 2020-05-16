@@ -10,7 +10,7 @@
       <section class="postDetailBody">
         <h3 class="title">{{$page.title}}</h3>
         <section class="note" >
-          <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.lastUpdated}}</span>
+          <span class="noteItem"><i class="iconfont iconriqi"></i>{{$page.frontmatter.date || $page.lastUpdated}}</span>
           <span :id="$page.path" :data-flag-title="$page.title" class="leancloud_visitors noteItem" v-if="$site.themeConfig.valine">
               <i class="iconfont iconbook "></i>
               <i class="leancloud-visitors-count normal">loading</i>
