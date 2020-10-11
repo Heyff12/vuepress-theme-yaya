@@ -8,134 +8,149 @@
 @flowerColor6: #07D6AA;
 @leafColor: green;
 
-#homePage{
-  width:100%;
+#homePage {
+  width: 100%;
   height: 100%;
   position: absolute;
+
   // background-color: #27e6a6;
   // background-image: linear-gradient(-60deg, #95e6f9, #5eb7f7);
-  .sun{
+  .sun {
     width: 220px;
     height: 220px;
     overflow: hidden;
     position: fixed;
-    z-index: 0;
-    top:0px;
-    right:10px;
+    z-index: 11;
+    top: 0px;
+    right: 10px;
     display: flex;
     align-items: center;
     // top:200px;
     // right:10px;
     // animation: sunPath 8s ease-in infinite;
     justify-content: center;
-    .sunSvg{
+
+    .sunSvg {
       animation: sunCircle 5s ease-in infinite;
     }
-    .enter{
-      width:100px;
+
+    .enter {
+      width: 100px;
       height: 80px;
       position: absolute;
       z-index: 200;
-      top:50%;
+      top: 50%;
       left: 50%;
       margin-left: -45px;
       margin-top: -40px;
       cursor: pointer;
     }
   }
-  .heart{
+
+  .heart {
     position: relative;
     width: 100px;
     height: 100px;
     background-color: red;
-    top:0px;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: beat .6s linear infinite;
-    &::before{
-        position: absolute;
-        left: -75px;
-        content: "";
-        width: 80px;
-        height: 100px;
-        background: red;
-        border-radius: 50px 0 0 50px;
+
+    &::before {
+      position: absolute;
+      left: -75px;
+      content: "";
+      width: 80px;
+      height: 100px;
+      background: red;
+      border-radius: 50px 0 0 50px;
     }
-    &::after{
-        position: absolute;
-        left: 10px;
-        top:-85px;
-        content: "";
-        width: 80px;
-        height: 100px;
-        background: red;
-        border-radius:0 50px 50px 0;
-        transform:rotate(-90deg);
+
+    &::after {
+      position: absolute;
+      left: 10px;
+      top: -85px;
+      content: "";
+      width: 80px;
+      height: 100px;
+      background: red;
+      border-radius: 0 50px 50px 0;
+      transform: rotate(-90deg);
     }
-    h3{
-        transform:rotate(-45deg);
-        color: white;
-        z-index: 10;
-        margin: -75px 0 0 -60px;
-        letter-spacing: 3px;
-        font-size: 50px;
+
+    h3 {
+      transform: rotate(-45deg);
+      color: white;
+      z-index: 10;
+      margin: -75px 0 0 -60px;
+      letter-spacing: 3px;
+      font-size: 50px;
     }
   }
 
-  .circleHalf{
-    width:75px;
+  .circleHalf {
+    width: 75px;
     height: 40px;
     overflow: hidden;
     position: absolute;
-    top:5px;
-    left:72.5px;
-    &:after{
+    top: 5px;
+    left: 72.5px;
+
+    &:after {
       content: '';
       position: absolute;
-      width:100%;
+      width: 100%;
       height: 80px;
       border-radius: 100% 100% 0 0;
       background-color: @flowerColor;
     }
-    &:nth-child(1){
-      left:160px;
-      top:12px;
-      transform:rotate(56deg);
+
+    &:nth-child(1) {
+      left: 160px;
+      top: 12px;
+      transform: rotate(56deg);
       transform-origin: left;
     }
-    &:nth-child(2){
-      left:196px;
-      top:80px;
-      transform:rotate(105deg);
+
+    &:nth-child(2) {
+      left: 196px;
+      top: 80px;
+      transform: rotate(105deg);
       transform-origin: left;
     }
-    &:nth-child(3){
-      left:165px;
-      top:158px;
-      transform:rotate(165deg);
+
+    &:nth-child(3) {
+      left: 165px;
+      top: 158px;
+      transform: rotate(165deg);
       transform-origin: left;
     }
-    &:nth-child(4){
-      left:90px;
-      top:175px;
-      transform:rotate(215deg);
+
+    &:nth-child(4) {
+      left: 90px;
+      top: 175px;
+      transform: rotate(215deg);
       transform-origin: left;
     }
-    &:nth-child(5){
-      left:25px;
-      top:125px;
-      transform:rotate(275deg);
+
+    &:nth-child(5) {
+      left: 25px;
+      top: 125px;
+      transform: rotate(275deg);
       transform-origin: left;
     }
-    &:nth-child(6){
-      left:25px;
-      top:46px;
-      transform:rotate(325deg);
+
+    &:nth-child(6) {
+      left: 25px;
+      top: 46px;
+      transform: rotate(325deg);
       transform-origin: left;
     }
   }
-  .flower{
+
+  .flower {
     width: 220px;
     height: 220px;
     overflow: hidden;
@@ -144,28 +159,32 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    .circleOut{
-      width:150px;
+
+    .circleOut {
+      width: 150px;
       height: 150px;
       border-radius: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: @flowerColor;
-      .circle{
-        width:120px;
+
+      .circle {
+        width: 120px;
         height: 120px;
         border-radius: 100%;
         background-color: yellow;
         display: flex;
         align-items: center;
         justify-content: center;
-        span{
-            font-size: 24px;
-            font-weight: normal;
-            color:@flowerColor;
+
+        span {
+          font-size: 24px;
+          font-weight: normal;
+          color: @flowerColor;
         }
       }
+
       // .arrow{
       //   width:0;
       //   height: 0;
@@ -174,47 +193,53 @@
       //   border-color: @flowerColor transparent transparent transparent;
       // }
     }
-    &.small{
-      transform:scale(.6);
+
+    &.small {
+      transform: scale(.6);
     }
   }
-  .sunFlower{
-    width:320px;
+
+  .sunFlower {
+    width: 320px;
     height: 520px;
     z-index: 100;
     transform-origin: bottom;
     animation: swing 3.2s ease-out infinite alternate;
     display: block;
-    .stem{
-      width:100px;
+
+    .stem {
+      width: 100px;
       height: 400px;
       position: relative;
       z-index: 1;
       border-radius: 100%;
-      border:10px solid @leafColor;
+      border: 10px solid @leafColor;
       border-color: @leafColor @leafColor transparent transparent;
-      margin:-60px 0 0 30px;
-      .leaf{
-        width:60px;
+      margin: -60px 0 0 30px;
+
+      .leaf {
+        width: 60px;
         height: 260px;
         border-radius: 0 100% 0 100%;
         background-color: @leafColor;
         position: absolute;
         bottom: 0;
-        left:10px;
+        left: 10px;
         transform: rotate(-10deg);
         transform-origin: right;
-        &:nth-child(2){
-          transform:rotate(20deg) scale(-1,1);
-          width:80px;
+
+        &:nth-child(2) {
+          transform: rotate(20deg) scale(-1, 1);
+          width: 80px;
           height: 320px;
-          left:50px;
+          left: 50px;
         }
       }
-    }   
+    }
   }
-  .flowerGroup{
-    width:100%;
+
+  .flowerGroup {
+    width: 100%;
     height: 600px;
     position: fixed;
     bottom: 0;
@@ -224,216 +249,255 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    .sunFlower{
-      &:nth-child(2){
-        .flower{
-            .circleOut{
-                background-color: @flowerColor2;
+
+    .sunFlower {
+      &:nth-child(2) {
+        .flower {
+          .circleOut {
+            background-color: @flowerColor2;
+          }
+
+          .circleHalf {
+            &:after {
+              background-color: @flowerColor2;
             }
-            .circleHalf{
-                &:after{
-                    background-color: @flowerColor2;
-                }
-            }
+          }
         }
       }
-      &:nth-child(3){
-        .flower{
-            .circleOut{
-                background-color: @flowerColor3;
+
+      &:nth-child(3) {
+        .flower {
+          .circleOut {
+            background-color: @flowerColor3;
+          }
+
+          .circleHalf {
+            &:after {
+              background-color: @flowerColor3;
             }
-            .circleHalf{
-                &:after{
-                    background-color: @flowerColor3;
-                }
-            }
+          }
         }
       }
-      &:nth-child(4){
-        .flower{
-            .circleOut{
-                background-color: @flowerColor4;
+
+      &:nth-child(4) {
+        .flower {
+          .circleOut {
+            background-color: @flowerColor4;
+          }
+
+          .circleHalf {
+            &:after {
+              background-color: @flowerColor4;
             }
-            .circleHalf{
-                &:after{
-                    background-color: @flowerColor4;
-                }
-            }
+          }
         }
       }
-      &:nth-child(5){
-        .flower{
-            .circleOut{
-                background-color: @flowerColor5;
+
+      &:nth-child(5) {
+        .flower {
+          .circleOut {
+            background-color: @flowerColor5;
+          }
+
+          .circleHalf {
+            &:after {
+              background-color: @flowerColor5;
             }
-            .circleHalf{
-                &:after{
-                    background-color: @flowerColor5;
-                }
-            }
+          }
         }
       }
-      &:nth-child(6){
-        .flower{
-            .circleOut{
-                background-color: @flowerColor6;
+
+      &:nth-child(6) {
+        .flower {
+          .circleOut {
+            background-color: @flowerColor6;
+          }
+
+          .circleHalf {
+            &:after {
+              background-color: @flowerColor6;
             }
-            .circleHalf{
-                &:after{
-                    background-color: @flowerColor6;
-                }
-            }
+          }
         }
       }
     }
-    &.second{
-        z-index: 9;
-        left:-80px;
-        bottom:-80px;
-        flex-direction: row-reverse;
-        .sunFlower{
-            animation: swingSmall 3.2s ease-out infinite alternate;
-        }
+
+    &.second {
+      z-index: 9;
+      left: -80px;
+      bottom: -80px;
+      flex-direction: row-reverse;
+
+      .sunFlower {
+        animation: swingSmall 3.2s ease-out infinite alternate;
+      }
     }
   }
-  .starGroup{
-    width:100%;
+
+  .starGroup {
+    width: 100%;
     height: 600px;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 8;
     display: none;
+
     // display: flex;
     // flex-wrap: wrap;
-    .flower{
-        transform: scale(.1);
-        top:-100px;
-        left:-60px;
-        position: absolute;
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
-        &:nth-child(3){
-            top:-120px;
-            left:50px;
-        }
-        &:nth-child(4){
-            top:-130px;
-            left:220px;
-        }
-        &:nth-child(5){
-            top:-60px;
-            left:180px;
-        }
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
-        &:nth-child(2){
-            top:-30px;
-            left:0;
-        }
+    .flower {
+      transform: scale(.1);
+      top: -100px;
+      left: -60px;
+      position: absolute;
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
+
+      &:nth-child(3) {
+        top: -120px;
+        left: 50px;
+      }
+
+      &:nth-child(4) {
+        top: -130px;
+        left: 220px;
+      }
+
+      &:nth-child(5) {
+        top: -60px;
+        left: 180px;
+      }
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: -30px;
+        left: 0;
+      }
     }
   }
 
-  .grassGround{
-    width:120%;
+  .grassGround {
+    width: 120%;
     height: 500px;
     background-image: linear-gradient(-60deg, greenyellow, #0e4c38);
     // background-color: #0e4c38;
     position: fixed;
     bottom: -235px;
-    left:-15%;
+    left: -15%;
     z-index: 7;
-    transform:rotate(8deg);
+    transform: rotate(8deg);
     transform-origin: center;
   }
 }
+
 @keyframes swing {
-  from{
-    transform:rotate(5deg);
+  from {
+    transform: rotate(5deg);
   }
-  to{
-    transform:rotate(-3deg);
+
+  to {
+    transform: rotate(-3deg);
   }
 }
+
 @keyframes swingSmall {
-  from{
-    transform:rotate(5deg) scale(.8);
+  from {
+    transform: rotate(5deg) scale(.8);
   }
-  to{
-    transform:rotate(-3deg) scale(.8);
+
+  to {
+    transform: rotate(-3deg) scale(.8);
   }
 }
+
 @keyframes beat {
-  from{
-    transform:scale(.4) rotate(45deg);
+  from {
+    transform: scale(.4) rotate(45deg);
   }
-  to{
-    transform:scale(.45) rotate(45deg);
+
+  to {
+    transform: scale(.45) rotate(45deg);
   }
 }
+
 @keyframes sunCircle {
-  from{
-    transform:rotate(0deg);
+  from {
+    transform: rotate(0deg);
   }
-  to{
-    transform:rotate(-360deg);
+
+  to {
+    transform: rotate(-360deg);
   }
 }
+
 @keyframes sunPath {
-  0%{
-      top:200px;
-      right:10px;
-      transform:scale(1);
+  0% {
+    top: 200px;
+    right: 10px;
+    transform: scale(1);
   }
-  15%{
-      top:80px;
-      right:15%;
-      transform:scale(.9);
+
+  15% {
+    top: 80px;
+    right: 15%;
+    transform: scale(.9);
   }
-  40%{
-      top:10px;
-      right:20%;
-      transform:scale(.8);
+
+  40% {
+    top: 10px;
+    right: 20%;
+    transform: scale(.8);
   }
-  50%{
-      top:-50px;
-      right:30%;
-      transform:scale(.7);
+
+  50% {
+    top: -50px;
+    right: 30%;
+    transform: scale(.7);
   }
-  60%{
-      top:10px;
-      right:70%;
-      transform:scale(.6);
+
+  60% {
+    top: 10px;
+    right: 70%;
+    transform: scale(.6);
   }
-  70%{
-      top:100px;
-      right:80%;
-      transform:scale(.5);
+
+  70% {
+    top: 100px;
+    right: 80%;
+    transform: scale(.5);
   }
-  80%{
-      top:100px;
-      right:90%;
-      transform:scale(.5);
+
+  80% {
+    top: 100px;
+    right: 90%;
+    transform: scale(.5);
   }
-  100%{
-        top:300px;
-      right:100%;
-      transform:scale(.5);
+
+  100% {
+    top: 300px;
+    right: 100%;
+    transform: scale(.5);
   }
 }
