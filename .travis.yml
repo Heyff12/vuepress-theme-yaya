@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-- 12.10.0
+  - 12.10.0
 install:
-- npm install
+  - npm install
 script:
-- npm run build
+  - npm run build
 deploy:
   - provider: npm
     email: 645068564@qq.com
@@ -13,7 +13,7 @@ deploy:
       secure: WXswpjk5c35yBLWOmd0rTbcNgUOUN9+hG24LpsGZ6DMiu/RN5VdStyOjZuy5ftYUwuY4bn4hjRfC52zjBlfZC+qlU8kamqWhesnbR3KMIPX0o/sFr+FX8jsNMQ4mvlDQzvHdiZiMOQgSTPYb8qDgHODW1l1LtB5fuF2YTAEnyegSldIKFfP//iKzPnF4Lb/KvaF32HoYraFf+Q3f5tVwjZP+/eYMJKlx5hGk3MJFTKWM3bXbeN1VcKLRXJXq6D8YAsZAX3rYJOzaj0HmP3x+o3+IMn+w73Um+pH2mGaGNcSBjwx7EvyIxO2uSjVEYpJLEahDeA+ulHhWEqOp5ZWQ9sY/t2fiP126l8Q/dI9T2DGtq4DBeedn3IQffPmxrRCbSM/L8z+Ov7Gd66lqEt9+9HNTCGV5q7Clabaz74++rVmvynXm7xPlLBpkUa1XuwrkYGGSm32EJs1XSphFacGYx2VCrTGSe0WmJTD1Iyt6n52S8pjzmliGQYuKHJkPJtto+pJ3UyXP0FIad59JcIP4VsL9En46zvT0vFxaRKicfBCy6/RvsRx7Aul7PV+5amz98wv93Gzl7w2lUPkbsxFZm8qFeLaSukGL03MVtNkpQRMYNHA3EgcLUs9DHEQDjJa9b/hNjaxNFD5OIn+ScmKY0AWOlFmOe5vXmeq5na54wU4=
     on:
       tags: true
-      branch: master
+      all_branches: true
       repo: Heyff12/vuepress-theme-yaya
     tag: latest
   - provider: pages
