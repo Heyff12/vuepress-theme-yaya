@@ -1,10 +1,10 @@
 ---
-title: '小程序路由index'
+title: "小程序路由index-1.2.2"
 # layout: 'List'
-tags: 
+tags:
   - haha
   - hehe
-category: 
+category:
   - vue
   - vuepress
 ---
