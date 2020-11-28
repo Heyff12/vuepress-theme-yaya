@@ -28,3 +28,8 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - run: npm i -g github-release-from-changelog
+      - run: github-release-from-changelog
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
