@@ -28,12 +28,12 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: crazy-max/ghaction-github-pages@v2
+          with:
+            target_branch: gh-pages
+            build_dir: dist
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - run: npm i -g github-release-from-changelog
       # - run: github-release-from-changelog
