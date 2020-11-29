@@ -1,9 +1,7 @@
-
 module.exports = (themeConfig, ctx) => {
-  
+
     const blogOptions = {
-        directories: [
-            {
+        directories: [{
                 // Unique ID of current classification
                 id: 'study',
                 // Target directory
@@ -32,7 +30,7 @@ module.exports = (themeConfig, ctx) => {
                 dirname: 'reading',
                 path: '/reading/',
                 itemPermalink: '/:regular',
-                layout:'LayoutBook',
+                layout: 'LayoutBook',
                 pagination: {
                     lengthPerPage: 9,
                 },
@@ -42,34 +40,34 @@ module.exports = (themeConfig, ctx) => {
                 dirname: 'writing',
                 path: '/writing/',
                 itemPermalink: '/:regular',
-                layout:'LayoutPic',
+                layout: 'LayoutPic',
                 pagination: {
                     lengthPerPage: 8,
                 },
             },
         ],
-        frontmatters: [
-            {
-                id: "tags",
-                keys: ['tags'],
-                path: '/tags/',
-                layout: 'FrontmatterKey',  //defaults to `FrontmatterKey.vue`
-                frontmatter: { title: '分类检索文章' },
-                // itemlayout: 'Layout',
-            }
-        ],
+        frontmatters: [{
+            id: "tags",
+            keys: ['tags'],
+            path: '/tags/',
+            layout: 'FrontmatterKey', //defaults to `FrontmatterKey.vue`
+            frontmatter: {
+                title: '分类检索文章'
+            },
+            // itemlayout: 'Layout',
+        }],
     }
-  
+
     const plugins = [
         ['@vuepress/back-to-top'],
         [
             '@vuepress/last-updated',
             {
-              transformer: (timestamp, lang) => {
-                const moment = require('moment')
-                moment.locale(lang)
-                return moment().format('YYYY-MM-D')
-              }
+                transformer: (timestamp, lang) => {
+                    const moment = require('moment')
+                    moment.locale(lang)
+                    return moment().format('YYYY-MM-D')
+                }
             }
         ],
         ['@vuepress/plugin-nprogress'],
@@ -78,16 +76,16 @@ module.exports = (themeConfig, ctx) => {
         }],
         ['@vuepress/blog', blogOptions],
     ]
-  
+
     const config = {
-      extend: '@vuepress/theme-default',
-      globalLayout: '/layouts/GlobalLayout.vue',
-      markdown: {
-          lineNumbers: true,
-          extractHeaders: [ 'h1','h2', 'h3', 'h4' ]
-      },
-      plugins,
+        extend: '@vuepress/theme-default',
+        globalLayout: '/layouts/GlobalLayout.vue',
+        markdown: {
+            lineNumbers: true,
+            extractHeaders: ['h1', 'h2', 'h3', 'h4']
+        },
+        plugins,
     }
-  
+
     return config
-  }
+}
