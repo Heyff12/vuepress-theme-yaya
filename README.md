@@ -44,6 +44,8 @@ npm i vuepress-theme-yaya
         picListBg: '/bg.jpg',
         workListBg: '/bg.jpg',
         bookListBg: '/book.jpg',
+        alipay: "/alipay.png", //支付宝打赏二维码
+        wechat: "/wechat.png", //微信打赏二维码
         nextLinks: true,
         prevLinks: true,
         smoothScroll:true,
