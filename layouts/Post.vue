@@ -50,9 +50,9 @@
         </section>
       </section>
     </section>
+    <YaReward />
     <section class="postComment" ref="comment">
       <YaComment />
-      <YaReward />
     </section>
   </YaLineContainer>
 </template>
