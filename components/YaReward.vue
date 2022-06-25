@@ -21,29 +21,30 @@
 <script>
 export default {
   name: "YaReward",
-  methods: {},
 };
 </script>
 
 <style lang="less" scoped>
-@width: 120px;
+@zan_width: 120px;
+@pay_width: 150px;
+
 .reward_out {
   width: 100%;
   margin: 20px auto;
-  height: 250px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   .reward_in {
-    width: @width;
-    height: @width;
+    width: @zan_width;
+    height: @zan_width;
     border-radius: 100%;
     background-color: #fec22b;
     color: white;
     font-size: 38px;
     font-weight: bold;
-    line-height: @width;
+    line-height: @zan_width;
     text-align: center;
     cursor: pointer;
   }
@@ -54,8 +55,8 @@ export default {
       text-align: center;
       padding: 10px;
       dt {
-        width: 120px;
-        height: 120px;
+        width: @pay_width;
+        height: @pay_width;
         overflow: hidden;
         img {
           width: 100%;
