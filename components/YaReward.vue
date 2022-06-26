@@ -1,16 +1,22 @@
 <template>
-  <section class="reward_out">
-    <section class="reward_in">赞</section>
-    <section class="reward_pic">
+  <section class="rewardOut">
+    <section class="rewardIn">赞</section>
+    <section class="rewardPic">
       <dl>
         <dt>
-          <img :src="$withBase($site.themeConfig.alipay)" alt="支付宝打赏" />
+          <img
+            :src="setCustomPathPrefix($site.themeConfig.alipay)"
+            alt="支付宝打赏"
+          />
         </dt>
         <dd>支付宝打赏</dd>
       </dl>
       <dl>
         <dt>
-          <img :src="$withBase($site.themeConfig.wechat)" alt="微信打赏" />
+          <img
+            :src="setCustomPathPrefix($site.themeConfig.wechat)"
+            alt="微信打赏"
+          />
         </dt>
         <dd>微信打赏</dd>
       </dl>
@@ -28,7 +34,7 @@ export default {
 @zan_width: 120px;
 @pay_width: 150px;
 
-.reward_out {
+.rewardOut {
   width: 100%;
   margin: 20px auto;
   height: 280px;
@@ -36,7 +42,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .reward_in {
+  .rewardIn {
     width: @zan_width;
     height: @zan_width;
     border-radius: 100%;
@@ -48,8 +54,9 @@ export default {
     text-align: center;
     cursor: pointer;
   }
-  .reward_pic {
+  .rewardPic {
     display: none;
+    cursor: pointer;
     flex-direction: row;
     dl {
       text-align: center;
@@ -70,7 +77,7 @@ export default {
     }
   }
   &:hover {
-    .reward_pic {
+    .rewardPic {
       display: flex;
     }
   }
