@@ -298,14 +298,19 @@
         </div>
       </section>
     </section>
+    <section class="footer">
+    <YaFooter />
+    </section>
   </section>
 </template>
 
 <script>
+import YaFooter from '@theme/components/YaFooter'
 
 export default {
   name:'Index',
   components: {
+    YaFooter,
   },
   data(){
     return {
